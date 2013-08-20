@@ -1,0 +1,384 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Theme Scouting 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-29 17:07+0100\n"
+"PO-Revision-Date: 2010-12-29 17:35+0100\n"
+"Last-Translator: Mikael Svensson <translations@mikaelsvensson.info>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: D:\\Internet\\Projekt\\Wordpress Themes\\scouting\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:6
+msgid "Page Not Found"
+msgstr "Borttappad sida?"
+
+#: 404.php:8
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help?"
+msgstr "Tyvärr, men sidan du letar efter verkar inte finnas. Kanske finns det du letar efter i menyn här till vänster? Annars kan du testa sökfunktionen här under..."
+
+#: archive.php:10
+msgid "Daily Archives"
+msgstr "Dagsarkiv"
+
+#: archive.php:13
+msgid "Monthly Archives"
+msgstr "Månadsarkiv"
+
+#: archive.php:16
+msgid "Yearly Archives"
+msgstr "Årsarkiv"
+
+#: archive.php:19
+msgid "Blog Archives"
+msgstr "Bloggarkiv"
+
+#: archive.php:31
+#: archive.php:58
+#: author.php:21
+#: author.php:48
+#: category.php:14
+#: category.php:48
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Äldre artiklar"
+
+#: archive.php:32
+#: archive.php:59
+#: author.php:22
+#: author.php:49
+#: category.php:15
+#: category.php:49
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Nyare artiklar <span class=\"meta-nav\">&raquo;</span>"
+
+#: archive.php:38
+#: author.php:28
+#: category.php:21
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permanent länk till %s"
+
+#: archive.php:43
+#: attachment.php:36
+#: author.php:33
+#: category.php:26
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Läs resten av artikeln <span class=\"meta-nav\">&raquo;</span>"
+
+#: attachment.php:6
+#, php-format
+msgid "Return to %s"
+msgstr "Tillbaka till %s"
+
+#: attachment.php:37
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: author.php:8
+#, php-format
+msgid "Articles by <span class=\"vcard\">%s</span>"
+msgstr "Artiklar av <span class=\"vcard\">%s</span>"
+
+#: category.php:7
+msgid "Articles in category "
+msgstr "Artiklar i kategori"
+
+#: category.php:33
+#, php-format
+msgid "Also posted in %s"
+msgstr "Dessutom publicerad i %s"
+
+#: category.php:35
+#: include-entry-meta-catsandtags.php:4
+msgid "Tagged "
+msgstr "Berör "
+
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Den här artikeln är lösenordsskyddad. Ange lösenordet för att läsa kommentarerna."
+
+#: comments.php:30
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> kommentarer"
+
+#: comments.php:30
+msgid "<span>One</span> Comment"
+msgstr "<span>En</span> kommentar"
+
+#: comments.php:61
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> trackbacks"
+
+#: comments.php:61
+msgid "<span>One</span> Trackback"
+msgstr "<span>En</span> trackback"
+
+#: comments.php:76
+msgid "Post a Comment"
+msgstr "Kommentera"
+
+#: comments.php:76
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Svara på %s"
+
+#: comments.php:81
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Du måste <a href=\"%s\" title=\"Logga in\">logga in</a> innan du kan lämna kommentarer."
+
+#: comments.php:94
+#, php-format
+msgid "Logged in as %s"
+msgstr "Inloggad som %s"
+
+#: comments.php:106
+msgid "Log out of this account"
+msgstr "Logga ut från detta konto"
+
+#: comments.php:107
+msgid "Log out"
+msgstr "Logga ut"
+
+#: comments.php:112
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Din e-postadress publiceras <em>aldrig</em>."
+
+#: comments.php:113
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Obligatoriska fält är markerade <span class=\"required\">*</span>"
+
+#: comments.php:116
+msgid "Name"
+msgstr "Namn"
+
+#: comments.php:117
+#: comments.php:125
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: comments.php:124
+msgid "Email"
+msgstr "E-postadress"
+
+#: comments.php:132
+msgid "Website"
+msgstr "Hemsida"
+
+#: comments.php:140
+msgid "Comment"
+msgstr "Kommentar"
+
+#: comments.php:146
+msgid "You may use these HTML tags and attributes:"
+msgstr "Du kan använda dessa HTML-koder:"
+
+#: comments.php:153
+msgid "Post Comment"
+msgstr "Skicka kommentar"
+
+#: functions.php:65
+msgid "Page "
+msgstr "Sida"
+
+#: functions.php:129
+#, php-format
+msgid "Posted %1$s at %2$s"
+msgstr "Publicerades %1$s kl. %2$s"
+
+#: functions.php:134
+msgid "Your comment is awaiting moderation"
+msgstr "Din kommentar väntar på att bli godkänd"
+
+#: functions.php:142
+msgid "Reply to comment"
+msgstr "Besvara kommentar"
+
+#: functions.php:143
+msgid "Log in to reply."
+msgstr "Logga in för att svara."
+
+#: functions.php:149
+#: functions.php:169
+#: include-entry-utilities-editlink.php:3
+msgid "Edit"
+msgstr "Redigera"
+
+#: functions.php:154
+msgid "Permalink to this comment"
+msgstr "Direktlänk till denna kommentar"
+
+#: functions.php:155
+msgid "Permalink"
+msgstr "Direktlänk"
+
+#: functions.php:163
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Av %1$s den %2$s kl. %3$s"
+
+#: functions.php:174
+msgid "Your trackback is awaiting moderation"
+msgstr "Din \"trackback\" väntar på godkännande"
+
+#: functions.php:282
+msgid "Further reading:"
+msgstr "Vidare läsning:"
+
+#: header.php:71
+#, php-format
+msgid "%s latest posts"
+msgstr "%s - Senaste artiklarna"
+
+#: header.php:72
+#, php-format
+msgid "%s latest comments"
+msgstr "%s - Senaste kommentarerna"
+
+#: header.php:101
+msgid "Skip to content"
+msgstr "Hoppa till artikeln"
+
+#: include-entry-meta-catsandtags.php:3
+msgid "Posted in "
+msgstr "Publicerad i "
+
+#: include-entry-meta.php:2
+msgid "By "
+msgstr "Av "
+
+#: include-entry-meta.php:3
+#, php-format
+msgid "View all posts by %s"
+msgstr "Visa alla artiklar av %s"
+
+#: include-entry-meta.php:6
+msgid "Published "
+msgstr "Publicerades"
+
+#: include-entry-utilities-bookmarklink.php:3
+#, php-format
+msgid "Bookmark the <a href=\"%1$s\" title=\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>. "
+msgstr "Skapa bokmärka till <a href=\"%1$s\" title=\"Permantent länk till %2$s\" rel=\"bookmark\">direktlänken</a>. "
+
+#: include-entry-utilities-commentsandtrackbacks.php:3
+#, fuzzy, php-format
+msgid "Follow any comments here with the <a href=\"%2$s\" title=\"Comments RSS to %1$s\" rel=\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>. "
+msgstr "Lägg upp ett bokmärke till den <a href=\"%1$s\" title=\"Permanent länk till %2$s\" rel=\"bookmark\">permanenta länken</a>. Håll koll på kommentarerna via <a href=\"%3$s\" title=\"RSS-flöde för kommentarer på %2$s\" rel=\"alternate\" type=\"application/rss+xml\">artikelns RSS-flöde</a>. "
+
+#: include-entry-utilities-commentsandtrackbacks.php:7
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Skriv kommentar\">Skriv en kommentar</a> eller lämna en \"trackback\": <a class=\"trackback-link\" href=\"%s\" title=\"Trackback-adress för din artikel\" rel=\"trackback\">Trackback-adress</a>."
+
+#: include-entry-utilities-commentsandtrackbacks.php:9
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Du kan inte kommentera, men du kan lämna en \"trackback\": <a class=\"trackback-link\" href=\"%s\" title=\"Trackback-adress för din artikel\" rel=\"trackback\">Trackback-adress</a>."
+
+#: include-entry-utilities-commentsandtrackbacks.php:11
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Du kan inte använda \"trackbacks\" men du kan <a class=\"comment-link\" href=\"#respond\" title=\"Skriv kommentar\">lämna en kommentar</a>."
+
+#: include-entry-utilities-commentsandtrackbacks.php:13
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Både kommentering och \"trackbacks\" är avstängt för tillfället."
+
+#: include-entry-utilities-commentslink.php:2
+msgid "Leave a comment"
+msgstr "Lämna en kommentar"
+
+#: include-entry-utilities-commentslink.php:2
+msgid "1 comment"
+msgstr "En kommentar"
+
+#: include-entry-utilities-commentslink.php:2
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: include-entry-utilities-printlink.php:3
+msgid "Print page"
+msgstr "Skriv ut artikel"
+
+#: search.php:7
+msgid "Articles related to "
+msgstr "Artiklar relaterade till "
+
+#: search.php:55
+msgid "Nothing Found"
+msgstr "Inga artiklar hittades"
+
+#: search.php:58
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Tyvärr motsvarar inga artiklar dina sökkriterier. Pröva gärna andra sökord."
+
+#: single.php:28
+#, php-format
+msgid "This entry was posted in %1$s%2$s."
+msgstr "Den här artikeln publicerades i %1$s%2$s."
+
+#: single.php:30
+msgid " and tagged "
+msgstr " och berör "
+
+#: tag.php:7
+msgid "Articles tagged "
+msgstr "Artiklar som berör "
+
+#: tag.php:32
+#, php-format
+msgid "Also tagged %s"
+msgstr "Berör även %s"
+
+#~ msgid "1 Comment"
+#~ msgstr "En kommentar"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s%2$s. Bookmark the <a href=\"%3$s\" title="
+#~ "\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>. Follow any comments "
+#~ "here with the <a href=\"%5$s\" title=\"Comments RSS to %4$s\" rel="
+#~ "\"alternate\" type=\"application/rss+xml\">RSS feed for this post</a>. "
+#~ msgstr ""
+#~ "Publicerad under %1$s%2$s. Vill du spara ett bokmärke kan du använda den "
+#~ "<a href=\"%3$s\" title=\"Permanent länk till %4$s\" rel=\"bookmark"
+#~ "\">permanenta länken</a> till artikeln. Följ kommentarer via <a href=\"%5"
+#~ "$s\" title=\"RSS-flöde för kommentarerna på %4$s\" rel=\"alternate\" type="
+#~ "\"application/rss+xml\">artikelns RSS-flöde</a>. "
+
+#~ msgid ""
+#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post "
+#~ "a comment</a> or leave a <a class=\"trackback-link\" href=\"%s\" title="
+#~ "\"Trackback URL for your post\" rel=\"trackback\">trackback URL</a>."
+#~ msgstr ""
+#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Lämna kommentar"
+#~ "\">Kommentera</a> eller lämna en <a class=\"trackback-link\" href=\"%s\" "
+#~ "title=\"Trackback-adress för din artikel\" rel=\"trackback\">trackback-"
+#~ "adress</a>."
+
+#~ msgid ""
+#~ "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in "
+#~ "as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title="
+#~ "\"Log out of this account\">Log out?</a></span>"
+#~ msgstr ""
+#~ "<span class=\"loggedin\">Du är inloggad som <a href=\"%1$s\" title="
+#~ "\"Inloggad som %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3"
+#~ "$s\" title=\"Logga ut\">Logga ut?</a></span>"
+
+#~ msgid ""
+#~ "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" "
+#~ "title=\"Permalink to this comment\">Permalink</a>"
+#~ msgstr ""
+#~ "Publicerades %1$s @ %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s"
+#~ "\" title=\"Permanent länk till denna kommentar\">Direktlänk</a>"
+
+#~ msgid "Reply"
+#~ msgstr "Svar"

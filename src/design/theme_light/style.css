@@ -1,0 +1,63 @@
+body {
+	color: #555;
+	background-attachment: fixed;
+	background-color: #dfcda4;
+}
+del {
+	color: #aaa;
+}
+#content,
+.alignright p.wp-caption-text {
+	background-color: #f9f7e5;
+}
+#content {
+	background-image: url("content_bg_top.png");
+}
+body.client-desktop #header {
+	background-image: url("header.gif");
+}
+body.client-mobile #header {
+	text-align: center;
+}
+@media screen {
+	body.client-desktop #header #branding {
+		display: none;
+	}
+	#footer {
+		color: #777;
+	}
+}
+#sidebar-opaque {
+	background-color: #f9f7e5;
+	background-image: url("content_bg_top.png");
+}
+
+#sidebar-opaque .widget-title,
+#sidebar-opaque ul.menu > li > a,
+#sidebar-opaque .menu > ul > li > a,
+#sidebar-opaque .widget_pages > ul > li > a {
+	/*background-color: #e9e4d0;*/
+}
+
+#blog-title,
+#blog-description,
+#blog-title a,
+#blog-description a {
+	color: #444;
+}
+
+
+.aligncenter {
+}
+body.client-desktop .alignright {
+	background-image: url("embed_float_right_bg.png");
+}
+.alignleft {
+}
+
+body.client-desktop #notwimpy {
+	background-image: url("not_wimpy.png");
+}
+.button-icon {
+	background-image: url("buttons.gif");
+}

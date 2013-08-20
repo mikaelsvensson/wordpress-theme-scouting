@@ -1,0 +1,160 @@
+/*
+
+ * font-family: 'Cabin', sans-serif;
+
+ * font-family: 'Molengo', sans-serif;
+
+ * font-family: 'Quattrocento Sans', sans-serif;
+
+ * font-family: 'Federo', sans-serif;
+
+ * font-family: 'Cagliostro', sans-serif;
+
+ */
+
+/*@import url(http://fonts.googleapis.com/css?family=Cabin:400,700,700italic,400italic|Molengo|Quattrocento+Sans|Federo|Cagliostro);*/
+
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Cagliostro);
+
+/*
+
+ * font-family: 'Cabin Sketch', cursive;
+
+ * font-family: 'Antic', sans-serif;
+
+ * font-family: 'Alfa Slab One', cursive;
+
+ * font-family: 'Fredericka the Great', cursive;
+
+ * font-family: 'Fresca', sans-serif;
+
+ */
+
+/*@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch|Antic|Alfa+Slab+One|Fredericka+the+Great|Fresca);*/
+
+body {
+
+    font-family: Cagliostro, Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+h1, h2 {
+
+    font-family: 'Fredericka the Great', Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+    font-weight: normal;
+
+}
+
+.entry-title {
+
+    font-size: 2em;
+
+}
+
+.entry-content h1 {
+
+    font-size: 1.5em;
+
+}
+
+.entry-content h2 {
+
+    font-size: 1.1em;
+
+}
+
+#header #branding {
+
+    left:     220px;
+
+    position: absolute;
+
+    top:      55px;
+
+}
+
+#content, #footer {
+
+    margin: 0 0 1em 14em;
+
+}
+
+#content-inner, #footer {
+
+    padding: 20px;
+
+}
+
+#content-inner {
+
+    padding: 20px;
+
+    margin:  0;
+
+}
+
+#wrapper {
+
+    width:  800px;
+
+    margin: 0 auto;
+
+}
+
+#header {
+
+    width:             800px;
+
+    height:            250px;
+
+    margin:            0 0 -50px 0;
+
+    position:          relative;
+
+    background-repeat: no-repeat;
+
+}
+
+#sidebar {
+
+    position: absolute;
+
+    left:     0;
+
+    top:      0;
+
+    width:    13em;
+
+}
+
+#sidebar-after-menu {
+
+    display: none;
+
+}
+
+#container {
+
+    position: relative;
+
+    margin:   0;
+
+    padding:  0;
+
+}
+
+#notwimpy {
+
+    position: absolute;
+
+    top:      65px;
+
+    right:    0;
+
+    width:    250px;
+
+    height:   110px;
+
+}
+

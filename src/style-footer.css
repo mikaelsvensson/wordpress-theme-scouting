@@ -1,0 +1,15 @@
+#widget-area-footer .widget_links h3 {
+    display: none;
+}
+
+#widget-area-footer .widget_links ul {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+@media print {
+    #widget-area-footer .widget_links {
+        display: none;
+    }
+}
