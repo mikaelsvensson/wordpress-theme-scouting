@@ -44,6 +44,6 @@
     display: inline;
 }
 
-.ical .amrcol1 {
+.ical td.amrcol1 {
     white-space: nowrap;
 }
