@@ -1,0 +1,9 @@
+form .wpst_question {
+    border-top:  1px solid #c4c0af;
+    margin-top:  1em;
+    padding-top: 1em;
+}
+form .wpst_question textarea {
+    width:       100%;
+    height:      15em;
+}

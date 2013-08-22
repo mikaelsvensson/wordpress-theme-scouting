@@ -16,6 +16,7 @@
 @import url("style-comments.css");
 @import url("style-mailform.css");
 @import url("style-amricaleventslist-customizations.css");
+@import url("style-wpsurveyandquiztool-customizations.css");
 
 @media print {
     body {
