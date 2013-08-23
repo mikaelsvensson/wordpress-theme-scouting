@@ -7,3 +7,17 @@ form .wpst_question textarea {
     width:       100%;
     height:      15em;
 }
+form .wpst_question p {
+    font-size: 80%;
+}
+
+ul.wpsqt_multiple_question {
+    list-style-type: none;
+    padding: 0;
+}
+form .wpst_question span.wpsqt_likert_answer {
+    display: block;
+}
+form .wpst_question br {
+    display: none;
+}
