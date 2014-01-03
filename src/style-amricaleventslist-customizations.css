@@ -23,6 +23,17 @@
     display: none;
 }
 
+#sidebar .events .noeventsmessage {
+    color:       inherit;
+    font-size:   80%;
+    font-weight: normal;
+    padding:     0.7em;
+}
+
+#sidebar .events .noeventsmessage:hover {
+    text-decoration: none;
+}
+
 #sidebar .amrical_credit,
 .entry-content .icalnav {
     display: none;
