@@ -10,6 +10,7 @@ $shortname = THEME_NAME; //This should be a shortened version of your theme name
 $entry_metadata_optionvalues = array(
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_AUTHOR ,
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_PUBLISHINGDATE ,
+        NACKASMU_OPTIONVALUE_ENTRYMETADATA_SHAREONFACEBOOK ,
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_CATSANDTAGS);
 $entry_utilities_optionvalues = array(
 		NACKASMU_OPTIONVALUE_ENTRYUTILITIES_PRINTLINK ,
@@ -38,6 +39,12 @@ $options_configuration = array (
             "type" => "checkbox",
             "std" => implode( ',' , $entry_utilities_optionvalues),
             "options" => $entry_utilities_optionvalues
+    ),
+    array(  "name" => "Facebook Page",
+            "desc" => "Add the Facebook Like button under the sidebar by specifying you Facebook Page address here.",
+            "id" => NACKASMU_OPTION_FACEBOOKURL,
+            "std" => "https://www.facebook.com/YOUR_NAME_HERE",
+            "type" => "text"
     ),
 /*
     array(  "name" => "Radio Selection Set",
@@ -80,7 +87,7 @@ $options_configuration = array (
             "std" => "Default",
             "options" => array("Defaults", "Option 1s", "Option 2s")
 	)
-	*/	
+	*/
 );
 
 function nackasmu_add_options() {
@@ -92,7 +99,7 @@ function nackasmu_add_options() {
 			$new_options[$key] = $existing; //This will add the value to the array
 			delete_option($key); 		//This deletes the old entry and cleans up the wp_option table
 		} else {
-			$new_options[$key] = $val; 
+			$new_options[$key] = $val;
 			delete_option($key);
 		}
 	}
@@ -125,8 +132,8 @@ function nackasmu_option_is_true( $option_id ) {
                 in_array( "yes",  $value) ||
                 in_array( "true",  $value);
     } else {
-        return $value == true || 
-                strtolower($value) == "yes" || 
+        return $value == true ||
+                strtolower($value) == "yes" ||
                 strtolower($value) == "true";
     }
 }
@@ -143,7 +150,7 @@ function nackasmu_option_is_multichoice( $option_id ) {
     foreach ($options_configuration as $value) {
         if ( $value['id'] == $option_id ) {
 	        return $value['type'] === "checkbox" || $value['type'] === "multiselect";
-        }    
+        }
     }
     return false;
 }
@@ -169,11 +176,11 @@ function nackasmu_add_admin() {
 				if(($value['type'] === "checkbox" or $value['type'] === "multiselect" ) and is_array($_REQUEST[ $value['id'] ])) {
 				    $_REQUEST[ $value['id'] ]=implode(',',$_REQUEST[ $value['id'] ]); //This will take from the array and make one string
 				}
-				$key = $value['id']; 
+				$key = $value['id'];
 				$val = $_REQUEST[$key];
 				$settings[$key] = $val;
 			}
-			update_option($shortname.'_options', $settings);                   
+			update_option($shortname.'_options', $settings);
 			header("Location: themes.php?page=controlpanel.php&saved=true");
             die;
         } else if( 'reset' == $_REQUEST['action'] ) {
@@ -197,25 +204,25 @@ function nackasmu_admin() {
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p>Settings for theme <strong>'.$themename.' have been saved.</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p>Settings for theme <strong>'.$themename.' have been reset.</strong></p></div>';
-    
+
 ?>
 <div class="wrap">
 <h2>Configuration For Theme <?php echo $themename; ?></h2>
 <form method="post">
-    <table class="form-table">  
+    <table class="form-table">
         <tbody>
-	<?php 
+	<?php
 	$settings = get_option( $shortname.'_options' );
-	foreach ( $options_configuration as $value ) { 
+	foreach ( $options_configuration as $value ) {
 		$id = $value['id'];
 		$std = $value['std'];
-		
+
 		echo '<tr valign="top">';
 		echo '<th scope="row">';
 		echo $value['name'];
 		echo '</th>';
 		echo '<td>';
-		
+
 		if ($value['type'] == "text") { ?>
 	        <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( $settings[$id] != "") { echo $settings[$id]; } else { echo $value['std']; } ?>" size="40" />
 	<?php } elseif ($value['type'] == "select") { ?>
@@ -229,7 +236,7 @@ function nackasmu_admin() {
 	                <?php $ch_values = explode(',',$settings[$id] ); foreach ($value['options'] as $option) { ?>
 	                <option<?php if ( in_array($option,$ch_values)) { echo ' selected="selected"'; }?> value="<?php echo $option; ?>"><?php echo $option; ?></option>
 	                <?php } ?>
-	            </select>		
+	            </select>
 	<?php } elseif ($value['type'] == "radio") { ?>
             <fieldset>
 			<?php foreach ($value['options'] as $option) { ?>
@@ -239,12 +246,12 @@ function nackasmu_admin() {
 	<?php } elseif ($value['type'] == "textarea") { ?>
 	            <textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="40" rows="5"/><?php if ( $settings[$id] != "") { echo $settings[$id]; } else { echo $value['std']; } ?></textarea>
 	<?php } elseif ($value['type'] == "checkbox") { ?>
-			<?php 
+			<?php
 			$ch_values = explode(',' , $settings[$id]);
 			foreach ($value['options'] as $option) { ?>
 			<label><input name="<?php echo $value['id']; ?>[]" type="<?php echo $value['type']; ?>" value="<?php echo $option; ?>" <?php if ( in_array($option,$ch_values)) { echo 'checked'; } ?>/><?php echo $option; ?></label><br />
 	<?php }
-	    } 
+	    }
         if ( isset($value['desc']) ) {
             echo '<span class="description">'.$value['desc'].'</span>';
         }
@@ -255,7 +262,7 @@ function nackasmu_admin() {
         </tbody>
     </table>
 	<p class="submit">
-		<input name="save" type="submit" value="Save changes" />    
+		<input name="save" type="submit" value="Save changes" />
 		<input type="hidden" name="action" value="save" />
 	</p>
 	</form>
@@ -271,5 +278,5 @@ function nackasmu_admin() {
 <?php
 } 	//End Tag for nackasmu_admin()
 
-add_action('admin_menu', 'nackasmu_add_admin'); 
+add_action('admin_menu', 'nackasmu_add_admin');
 ?>

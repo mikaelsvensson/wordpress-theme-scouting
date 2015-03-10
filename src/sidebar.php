@@ -37,5 +37,10 @@
 				<?php dynamic_sidebar( THEME_WIDGETAREA_BELOWSIDEBAR_ID ); ?>
 			</div>
 		<?php } ?>
+		<?php if ( trim(nackasmu_get_option( NACKASMU_OPTION_FACEBOOKURL ) )) { ?>
+			<div class="widget-area" style="text-align: center">
+                <div class="fb-like" data-href="<?= nackasmu_get_option( NACKASMU_OPTION_FACEBOOKURL ) ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+            </div>
+		<?php } ?>
 	</div>
 </div>
