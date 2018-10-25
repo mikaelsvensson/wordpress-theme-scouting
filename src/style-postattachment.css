@@ -32,11 +32,11 @@
     margin: 0 1em 0 0;
 }
 
-p.wp-caption-text {
-    /*font-style: italic;*/
+.entry-content p.wp-caption-text {
     margin:     0;
     padding:    0.3em;
     text-align: center;
+    font-size:  75%;
 }
 
 .alignright p.wp-caption-text,
@@ -58,6 +58,12 @@ p.wp-caption-text {
 
 div.wp-caption img {
     display: block;
+    height: auto;
+}
+
+div.wp-caption,
+div.wp-caption img {
+    max-width: 500px;
 }
 
 div.wp-caption.aligncenter img {

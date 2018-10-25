@@ -9,7 +9,9 @@
 }
 
 @media print {
-    #widget-area-footer .widget_links {
+    #footer,
+    .fb-share-button,
+    .type-post .entry-meta {
         display: none;
     }
 }

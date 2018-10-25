@@ -27,6 +27,10 @@
         color: #000;
     }
 
+    .entry-content a {
+        text-decoration: none !important;
+    }
+
     #wrapper, #header, #content, #footer {
         width:   100%;
         margin:  0;
@@ -42,11 +46,11 @@
     }
 
     #header {
-        margin:        0 0 1em 0;
+        margin:        1em 0 2em 0;
         padding:       0 0 1em 0;
         font-style:    italic;
-        font-size:     90%;
-        border-bottom: 0.05em solid;
+        font-size:     100%;
+        /*border-bottom: 0.05em solid;*/
     }
 
     .breadcrumbs, #sidebar, #respond, .entry-utility, div.comment-utilities {
