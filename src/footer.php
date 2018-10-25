@@ -12,5 +12,6 @@
 	</div>
 	<div id="notwimpy"></div>
 </div>
+<?php wp_footer(); ?>
 </body>
 </html>

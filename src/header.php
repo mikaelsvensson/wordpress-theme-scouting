@@ -34,58 +34,9 @@
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
-	<?php
-	if (is_single() || is_page()) {
-		if ($jsSrc = get_post_meta($post->ID, 'scouting-javascript-src', true)) {
-			wp_enqueue_script( 'jquery' );
-	        $jsSrcCounter = 0;
-	        foreach (explode(' ', $jsSrc) as $value) {
-	            $scriptName = 'scouting-custom-js-' . $jsSrcCounter;
-				wp_deregister_script( $scriptName );
-				wp_register_script( $scriptName, $value);
-				wp_enqueue_script( $scriptName );
-
-	            $jsSrcCounter++;
-	        }
-		}
-		if ($cssSrc = get_post_meta($post->ID, 'scouting-css-src', true)) {
-	        $cssSrcCounter = 0;
-	        foreach (explode(' ', $cssSrc) as $value) {
-                $cssName = 'scouting-custom-css-' . $cssSrcCounter;
-                wp_deregister_style( $cssName );
-                wp_register_style( $cssName, $value);
-                wp_enqueue_style( $cssName );
-
-                $cssSrcCounter++;
-            }
-		}
-	}
-	?>
-
 	<?php wp_head(); ?>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style-contactform7.css" />
-
-	<?php
-	if (is_single() || is_page()) {
-        if ($css = get_post_meta($post->ID, 'scouting-css', true)) {
-            echo '<style type="text/css">'.$css.'</style>';
-        }
-        if ($js = get_post_meta($post->ID, 'scouting-javascript-ondomready', true)) {
-			echo '
-                <script type="text/javascript">
-					jQuery.noConflict();
-					(function($) {
-						$(document).ready(function() { 
-							var entryContentElement = $("div.entry-content").get(0);
-							'.$js.'
-						} );
-					})(jQuery);
-                </script>
-                ';
-		}
-	}
-	?>
 
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', THEME_NAME ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', THEME_NAME ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
