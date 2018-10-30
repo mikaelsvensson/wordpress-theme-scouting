@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Cagliostro);
+
+body {
+    font-family: Cagliostro, Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-image: url("design/theme_light/bg.jpg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Cagliostro, Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: normal;
+}
+
+blockquote,
+q {
+    font-family: serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+em {
+    color: #333;
+    letter-spacing: 0.04em;
+    font-style: normal;
+}
+
+strong {
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+cite {
+    font-style: normal;
+}
+
+.entry-title {
+    font-family: 'Fredericka the Great', Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: normal;
+}
+
+@media screen {
+    #header #branding {
+        left: 220px;
+        position: absolute;
+        top: 55px;
+    }
+}
+
+#content, #footer {
+    margin: 0 0 1em 14em;
+}
+
+@media print {
+    #content, #footer {
+        margin: 0 0 0 0;
+    }
+}
+
+@media screen {
+    #content-inner, #footer {
+        padding: 20px;
+    }
+
+    #content-inner {
+        padding: 20px;
+        margin: 0;
+    }
+
+    #wrapper {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    #header {
+        width: 800px;
+        height: 250px;
+        margin: 0 0 -50px 0;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+}
+
+#sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13em;
+}
+
+#sidebar-after-menu {
+    display: none;
+}
+
+#container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#notwimpy {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 250px;
+    height: 110px;
+}
+
+body #sidebar .menu {
+    font-size: 12pt;
+}
+
+body #sidebar .menu ul.children,
+body #sidebar .widget_links {
+    font-size: 10pt;
+}
+
+@media screen {
+    body .alignright {
+        margin: 0 -120px 0 1em;
+    }
+}
+body #header {
+    background-image: url("design/theme_light/header.gif");
+}
+@media screen {
+    body #header #branding {
+        display: none;
+    }
+}
+body .alignright {
+    background-image: url("design/theme_light/embed_float_right_bg.png");
+}
+
+body #notwimpy {
+    background-image: url("design/theme_light/not_wimpy.png");
+}

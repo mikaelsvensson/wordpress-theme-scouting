@@ -13,16 +13,7 @@ del {
 #content {
 	background-image: url("content_bg_top.png");
 }
-body.client-desktop #header {
-	background-image: url("header.gif");
-}
-body.client-mobile #header {
-	text-align: center;
-}
 @media screen {
-	body.client-desktop #header #branding {
-		display: none;
-	}
 	#footer {
 		color: #777;
 	}
@@ -49,14 +40,7 @@ body.client-mobile #header {
 
 .aligncenter {
 }
-body.client-desktop .alignright {
-	background-image: url("embed_float_right_bg.png");
-}
 .alignleft {
-}
-
-body.client-desktop #notwimpy {
-	background-image: url("not_wimpy.png");
 }
 .button-icon {
 	background-image: url("buttons.gif");

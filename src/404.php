@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="container">
-    <?php if (nackasmu_is_mobile()) { get_sidebar(); } ?>
+    <?php get_sidebar(); ?>
 	<div id="content">
 	    <div id="content-inner">
 			<div id="post-0" class="post error404 not-found">
@@ -12,6 +12,5 @@
 			</div>
 		</div>
 	</div>
-	<?php if (!nackasmu_is_mobile()) { get_sidebar(); } ?>
 </div>
 <?php get_footer(); ?>

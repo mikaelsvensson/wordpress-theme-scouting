@@ -5,6 +5,18 @@
 				<?php dynamic_sidebar( THEME_WIDGETAREA_ABOVEMENU_ID ); ?>
 			</div>
 		<?php } ?>
+
+        <?php
+//        wp_nav_menu(
+//            array(
+//                'menu' => 'primary',
+//                'container_class' => 'my_extra_menu_class',
+//                'depth' => 2,
+//                'link_before' => '<span class="screen-reader-text">',
+//                'link_after' => '</span>',
+//            )
+//        );
+        ?>
 		
 		<?php
 		if (nackasmu_is_mobile()) {

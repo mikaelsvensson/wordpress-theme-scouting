@@ -1,5 +1,5 @@
 <?php
-require_once('lib/Mobile-Detect-2.6.0/Mobile_Detect.php');
+//require_once('lib/Mobile-Detect-2.6.0/Mobile_Detect.php');
 
 define("THEME_NAME", "scouting");
 define("THEME_NAME_PRETTY", "Scouting");
@@ -65,9 +65,18 @@ if ( isset( $_GET['activated'] ) ) {
 // update_option( 'sidebars_widgets', NULL );
 
 function nackasmu_is_mobile() {
-$mobileDetect = new Mobile_Detect();
-    return $mobileDetect->isMobile();
+    //$mobileDetect = new Mobile_Detect();
+    return false;//$mobileDetect->isMobile();
 }
+
+//function nackasmu_register_menus() {
+//    register_nav_menus(
+//        array(
+//            'primary' => __( 'Main Menu' )
+//        )
+//    );
+//}
+//add_action( 'init', 'nackasmu_register_menus' );
 
 function nackasmu_get_page_number() {
 	if ( get_query_var('paged') ) {
@@ -133,8 +142,8 @@ function nackasmu_custom_comments($comment, $args, $depth) {
 	print '<div class="comment-content">';
 	comment_text();
 	print '</div>';
-	
-	print( '<div class="comment-meta">' ); 
+
+	print( '<div class="comment-meta">' );
     printf( __( 'Posted %1$s at %2$s' , THEME_NAME ) ,
             get_comment_date() ,
             get_comment_time() );
@@ -143,8 +152,8 @@ function nackasmu_custom_comments($comment, $args, $depth) {
        printf( ' <span class="unapproved">%s.</span>' , __('Your comment is awaiting moderation' , THEME_NAME ) );
 	}
 	print( '</div>' );
-	print( '<div class="comment-utilities">' ); 
-	
+	print( '<div class="comment-utilities">' );
+
     // echo the comment reply link
     if($args['type'] == 'all' || get_comment_type() == 'comment') {
         comment_reply_link(array_merge($args, array(
@@ -156,8 +165,8 @@ function nackasmu_custom_comments($comment, $args, $depth) {
                 )));
     }
     if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_EDITLINK ) ) {
-		edit_comment_link(__( 'Edit' , THEME_NAME ), 
-				'<span class="edit-link">', 
+		edit_comment_link(__( 'Edit' , THEME_NAME ),
+				'<span class="edit-link">',
 				'.</span> ');
     }
     if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_BOOKMARKPERMALINK ) ) {
@@ -179,7 +188,7 @@ function nackasmu_custom_pings($comment, $args, $depth) {
 	print '<div class="comment-content">';
 	comment_text();
 	print '</div>';
-    print( '<div class="comment-meta">' ); 
+    print( '<div class="comment-meta">' );
     printf( __( 'Posted %1$s at %2$s' , THEME_NAME ) ,
             get_comment_date() ,
             get_comment_time() );
@@ -187,10 +196,10 @@ function nackasmu_custom_pings($comment, $args, $depth) {
        printf( '<span class="unapproved">%s.</span>' , __('Your trackback is awaiting moderation' , THEME_NAME ) );
     }
     print '</div>';
-	print( '<div class="comment-utilities">' ); 
+	print( '<div class="comment-utilities">' );
 	if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_EDITLINK ) ) {
-		edit_comment_link(__( 'Edit' , THEME_NAME ), 
-	            '<span class="edit-link">', 
+		edit_comment_link(__( 'Edit' , THEME_NAME ),
+	            '<span class="edit-link">',
 	            '.</span> ');
     }
 	print '</div>';

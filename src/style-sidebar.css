@@ -21,41 +21,6 @@
     margin:          0;
 }
 
-body.client-mobile #sidebar li {
-    float: left;
-}
-
-body.client-mobile #sidebar-after-menu {
-    display: block;
-    clear:   both;
-}
-
-body.client-mobile #sidebar div.ical span.eventdate br {
-    display: none;
-}
-
-body.client-mobile #sidebar ul {
-    list-style-type: none;
-    height:          2em;
-}
-
-body.client-desktop #sidebar .menu {
-    font-size: 12pt;
-}
-
-body.client-mobile #sidebar .menu {
-    font-size: 1.1em;
-}
-
-body.client-desktop #sidebar .menu ul.children,
-body.client-desktop #sidebar .widget_links {
-    font-size: 10pt;
-}
-
-body.client-mobile #sidebar .menu ul.children,
-body.client-mobile #sidebar .widget_links {
-    font-size: 0.9em;
-}
 
 #sidebar .widget-title,
 #sidebar ul.menu > li > a,
