@@ -64,17 +64,12 @@ if ( isset( $_GET['activated'] ) ) {
 }
 // update_option( 'sidebars_widgets', NULL );
 
-function nackasmu_is_mobile() {
-    //$mobileDetect = new Mobile_Detect();
-    return false;//$mobileDetect->isMobile();
-}
-
 //function nackasmu_register_menus() {
 //    register_nav_menus(
 //        array(
 //            'primary' => __( 'Main Menu' )
 //        )
-//    );
+//    );    
 //}
 //add_action( 'init', 'nackasmu_register_menus' );
 

@@ -19,21 +19,11 @@
         ?>
 		
 		<?php
-		if (nackasmu_is_mobile()) {
-		    $menuConfig = array(
-                'sort_column' => 'menu_order',
-                'depth' => 1,
-                'show_home'   => true,
-                'link_before' => '',
-                'link_after'  => '' ); 
-		} else {
-            $menuConfig = array(
-                'sort_column' => 'menu_order',
-                'show_home'   => true,
-                'link_before' => '',
-                'link_after'  => '' ); 
-		}
-		wp_page_menu( $menuConfig );
+        wp_page_menu(array(
+            'sort_column' => 'menu_order',
+            'show_home'   => true,
+            'link_before' => '',
+            'link_after'  => '' ));
 		?>
 		<div id="sidebar-after-menu"></div>
 		
