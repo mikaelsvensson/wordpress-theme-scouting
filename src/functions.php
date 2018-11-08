@@ -202,10 +202,10 @@ function nackasmu_custom_pings($comment, $args, $depth) {
 
 function commenter_link() {
 	$commenter = get_comment_author_link();
-	if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
-		$commenter = ereg_replace( '(<a[^>]* class=[\'"]?)', '\\1url ' , $commenter );
+	if ( preg_match( '/<a[^>]* class=[^>]+>/', $commenter ) ) {
+		$commenter = preg_replace( '/(<a[^>]* class=[\'"]?)/', '$1url ' , $commenter );
 	} else {
-		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
+		$commenter = preg_replace( '/(<a )\\//', '$1class="url "' , $commenter );
 	}
 	$avatar_email = get_comment_author_email();
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, 80 ) );
