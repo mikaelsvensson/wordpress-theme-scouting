@@ -35,11 +35,11 @@
           href="<?php bloginfo('stylesheet_url'); ?>"/>
     <link rel="stylesheet"
           type="text/css"
-          media="screen and (min-width: 50em)"
+          media="screen and (min-width: 768px)"
           href="<?php bloginfo('stylesheet_directory'); ?>/style-device-large.css"/>
     <link rel="stylesheet"
           type="text/css"
-          media="screen and (max-width: 50em)"
+          media="screen and (max-width: 767px)"
           href="<?php bloginfo('stylesheet_directory'); ?>/style-device-small.css"/>
 
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>

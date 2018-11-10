@@ -1,9 +1,11 @@
 body {
-    font-family: sans-serif;
+    font-family: serif;
+    background-image: url("design/theme_light/bg_mobile_low.jpg");
+    background-size: cover;
 }
 
 h1, h2 {
-    font-family: sans-serif;
+    font-family: serif;
     font-weight: bold;
 }
 
@@ -30,7 +32,7 @@ q {
 }
 
 #content-inner {
-    padding: 0.5em;
+    padding: 1em;
     margin:  0;
 }
 

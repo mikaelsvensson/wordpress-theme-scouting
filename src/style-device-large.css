@@ -2,7 +2,8 @@
 
 body {
     font-family: Cagliostro, Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    background-image: url("design/theme_light/bg.jpg");
+    background-image: url("design/theme_light/bg_desktop.jpg");
+    background-size: cover;
 }
 
 h1,
@@ -76,7 +77,6 @@ cite {
     }
 
     #header {
-        width: 800px;
         height: 250px;
         margin: 0 0 -50px 0;
         position: relative;
