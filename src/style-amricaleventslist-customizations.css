@@ -24,10 +24,10 @@
 }
 
 #sidebar .events .noeventsmessage {
-    color:       inherit;
-    font-size:   80%;
+    color: inherit;
+    font-size: 80%;
     font-weight: normal;
-    padding:     0.7em;
+    padding: 0.7em;
 }
 
 #sidebar .events .noeventsmessage:hover {
@@ -44,17 +44,50 @@
 }
 
 .entry-content .ical .group {
-    font-size:   1.25em;
+    font-size: 1.25em;
     font-weight: bold;
-}
-
-.entry-content .ical .eventdate,
-.entry-content .ical .starttime,
-.entry-content .ical .enddate,
-.entry-content .ical .endtime {
-    display: inline;
 }
 
 .ical td.amrcol1 {
     white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    article.event {
+        margin: 0 0 1em 0
+    }
+
+    article.event span.summary {
+        display: block;
+    }
+
+    article.event span.eventdate:after {
+        content: " ";
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article.event {
+        margin: 0 0 0.5em 0
+    }
+
+    article.event span.summary {
+        display: inline;
+    }
+
+    article.event span.eventdate {
+        display: inline-block;
+        min-width: 6em;
+    }
+
+    article.event span.starttime,
+    article.event span.endtime {
+        display: inline-block;
+        min-width: 4em;
+    }
+}
+
+article.event span.summary {
+    white-space: nowrap;
+    font-weight: bold;
 }
