@@ -4,8 +4,6 @@
 
 #sidebar .widget-title,
 #sidebar a {
-    /*font-family: sans-serif;*/
-    /*font-size: 10pt;*/
     font-size: 100%;
     display:   block;
 }
@@ -33,20 +31,6 @@
 #sidebar .menu > ul {
     padding-left:   0;
     padding-bottom: 0.5em;
-}
-
-#sidebar div.widget-container > ul,
-#sidebar ul.menu > li > ul,
-#sidebar .menu > ul > li > ul,
-#sidebar .widget_pages > ul > li > ul {
-    /*padding-top: 0.5em;*/
-}
-
-#sidebar div.widget-container,
-#sidebar ul.menu > li,
-#sidebar .menu > ul > li,
-#sidebar .widget_pages > ul > li {
-    /*margin-bottom: 0.5em;*/
 }
 
 /* Only show top-level and first-level pages in the sidebar menu */
