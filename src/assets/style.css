@@ -15,19 +15,12 @@ del {
 }
 @media screen {
 	#footer {
-		color: #777;
+		font-size: 90%;
 	}
 }
 #sidebar-opaque {
 	background-color: #f9f7e5;
 	background-image: url("content_bg_top.png");
-}
-
-#sidebar-opaque .widget-title,
-#sidebar-opaque ul.menu > li > a,
-#sidebar-opaque .menu > ul > li > a,
-#sidebar-opaque .widget_pages > ul > li > a {
-	/*background-color: #e9e4d0;*/
 }
 
 #blog-title,
@@ -41,7 +34,4 @@ del {
 .aligncenter {
 }
 .alignleft {
-}
-.button-icon {
-	background-image: url("buttons.gif");
 }

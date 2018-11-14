@@ -1,6 +1,6 @@
 body {
     font-family: serif;
-    background-image: url("design/theme_light/bg_mobile_low.jpg");
+    background-image: url("assets/bg_mobile_low.jpg");
     background-size: cover;
 }
 
@@ -105,4 +105,18 @@ body #sidebar .widget_links {
 }
 body #header {
     text-align: center;
+}
+
+/* style-amricaleventslist-customizations.css */
+
+article.event {
+    margin: 0 0 1em 0
+}
+
+article.event span.summary {
+    display: block;
+}
+
+article.event span.eventdate:after {
+    content: " ";
 }

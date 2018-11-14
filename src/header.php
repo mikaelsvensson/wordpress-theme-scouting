@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>"/>
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php
         $siteTitle = get_bloginfo('name') . ', ' . get_bloginfo('description');
@@ -32,15 +33,15 @@
 
     <link rel="stylesheet"
           type="text/css"
-          href="<?php bloginfo('stylesheet_url'); ?>"/>
+          href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style.css')?>"/>
     <link rel="stylesheet"
           type="text/css"
           media="screen and (min-width: 768px)"
-          href="<?php bloginfo('stylesheet_directory'); ?>/style-device-large.css"/>
+          href="<?php bloginfo('stylesheet_directory'); ?>/style-device-large.css?<?=filemtime(dirname( __FILE__ ) . '/style-device-large.css')?>"/>
     <link rel="stylesheet"
           type="text/css"
           media="screen and (max-width: 767px)"
-          href="<?php bloginfo('stylesheet_directory'); ?>/style-device-small.css"/>
+          href="<?php bloginfo('stylesheet_directory'); ?>/style-device-small.css?<?=filemtime(dirname( __FILE__ ) . '/style-device-small.css')?>"/>
 
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 

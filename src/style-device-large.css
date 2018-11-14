@@ -2,7 +2,7 @@
 
 body {
     font-family: Cagliostro, Garamond, "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    background-image: url("design/theme_light/bg_desktop.jpg");
+    background-image: url("assets/bg_desktop.jpg");
     background-size: cover;
 }
 
@@ -124,7 +124,7 @@ body #sidebar .widget_links {
     }
 }
 body #header {
-    background-image: url("design/theme_light/header.gif");
+    background-image: url("assets/header.gif");
 }
 @media screen {
     body #header #branding {
@@ -132,9 +132,30 @@ body #header {
     }
 }
 body .alignright {
-    background-image: url("design/theme_light/embed_float_right_bg.png");
+    background-image: url("assets/embed_float_right_bg.png");
 }
 
 body #notwimpy {
-    background-image: url("design/theme_light/not_wimpy.png");
+    background-image: url("assets/not_wimpy.png");
+}
+
+/* style-amricaleventslist-customizations.css */
+
+article.event {
+    margin: 0 0 0.5em 0
+}
+
+article.event span.summary {
+    display: inline;
+}
+
+article.event span.eventdate {
+    display: inline-block;
+    min-width: 6em;
+}
+
+article.event span.starttime,
+article.event span.endtime {
+    display: inline-block;
+    min-width: 4em;
 }

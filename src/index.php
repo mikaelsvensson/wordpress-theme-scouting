@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php get_header(); ?>
 <div id="container">
     <?php get_sidebar(); ?>
