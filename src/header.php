@@ -3,8 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php
         $siteTitle = get_bloginfo('name') . ', ' . get_bloginfo('description');
@@ -46,8 +45,6 @@
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 
     <?php wp_head(); ?>
-
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style-contactform7.css"/>
 
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>"
           title="<?php printf(__('%s latest posts', THEME_NAME), wp_specialchars(get_bloginfo('name'), 1)); ?>"/>

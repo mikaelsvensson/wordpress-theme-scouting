@@ -9,13 +9,344 @@
  Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-@import url("assets/style.css");
-@import url("style-postattachment.css");
-@import url("style-sidebar.css");
-@import url("style-footer.css");
-@import url("style-comments.css");
-@import url("style-mailform.css");
-@import url("style-wpsurveyandquiztool-customizations.css");
+
+body {
+    color: #555;
+    background-attachment: fixed;
+    background-color: #dfcda4;
+}
+del {
+    color: #aaa;
+}
+#content,
+.alignright p.wp-caption-text {
+    background-color: #f9f7e5;
+}
+#content {
+    background-image: url("content_bg_top.png");
+}
+@media screen {
+    #footer {
+        font-size: 90%;
+    }
+}
+#sidebar-opaque {
+    background-color: #f9f7e5;
+    background-image: url("content_bg_top.png");
+}
+
+#blog-title,
+#blog-description,
+#blog-title a,
+#blog-description a {
+    color: #444;
+}
+
+
+.aligncenter {
+}
+.alignleft {
+}
+
+/*****************************************************************
+ * post attachment
+ *****************************************************************/
+
+.entry-content,
+.entry-utility,
+.post {
+    clear: both;
+}
+
+.aligncenter {
+    margin:  0 auto;
+    display: block;
+}
+
+.alignright {
+    float:               right;
+    padding:             10px;
+    background-position: top right;
+}
+
+@media print {
+    .alignright {
+        margin: 0;
+    }
+}
+
+.alignleft {
+    float:  left;
+    margin: 0 1em 0 0;
+}
+
+.entry-content p.wp-caption-text {
+    margin:     0;
+    padding:    0.3em;
+    text-align: center;
+    font-size:  75%;
+}
+
+.alignright p.wp-caption-text,
+.alignleft p.wp-caption-text {
+    padding: 0.1em;
+}
+
+.aligncenter p.wp-caption-text {
+    text-align: center;
+}
+
+.alignright p.wp-caption-text {
+    text-align: right;
+}
+
+.alignleft p.wp-caption-text {
+    text-align: left;
+}
+
+div.wp-caption img {
+    display: block;
+    height: auto;
+}
+
+div.wp-caption,
+div.wp-caption img {
+    max-width: 500px;
+}
+
+div.wp-caption.aligncenter img {
+    padding: 0 5px;
+}
+
+div.wp-caption.alignright img {
+    padding: 0 0 0 10px;
+}
+
+div.wp-caption.alignleft img {
+    padding: 0 10px 0 0;
+}
+
+/*****************************************************************
+ * side bar
+ *****************************************************************/
+
+#sidebar .widget-title {
+    margin: 0;
+}
+
+#sidebar .widget-title,
+#sidebar a {
+    font-size: 100%;
+    display:   block;
+}
+
+#sidebar ul {
+    padding: 0 0 0 1.5em;
+    margin:  0;
+}
+
+#sidebar li {
+    list-style-type: none;
+    padding:         0;
+    margin:          0;
+}
+
+
+#sidebar .widget-title,
+#sidebar ul.menu > li > a,
+#sidebar .menu > ul > li > a,
+#sidebar .widget_pages > ul > li > a {
+    padding:     0.5em;
+    font-weight: normal;
+}
+
+#sidebar .menu > ul {
+    padding-left:   0;
+    padding-bottom: 0.5em;
+}
+
+/* Only show top-level and first-level pages in the sidebar menu */
+#sidebar .menu ul ul.children ul.children {
+    display: none;
+}
+
+#sidebar-transparent {
+    margin-top: 1em;
+}
+
+#widget-area-belowsidebar .widget_links h3 {
+    display: none;
+}
+
+#widget-area-belowsidebar {
+    text-align: center;
+}
+
+#widget-area-belowsidebar li {
+    list-style: none;
+}
+
+#widget-area-belowsidebar ul {
+    margin:  0;
+    padding: 0;
+}
+
+/*****************************************************************
+ * footer
+ *****************************************************************/
+
+#widget-area-footer .widget_links h3 {
+    display: none;
+}
+
+#widget-area-footer .widget_links ul {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+@media print {
+    #footer,
+    .fb-share-button,
+    .type-post .entry-meta {
+        display: none;
+    }
+}
+
+/*****************************************************************
+ * comments
+ *****************************************************************/
+
+#comments {
+    border-top: 1px solid #c4c0af;
+    padding:    0.5em 0 0 0;
+    margin:     0.5em 0 0 0;
+}
+
+#comments h3 {
+    margin: 0;
+}
+
+#comments li.comment,
+#comments li.pingback {
+    border-bottom: 1px solid #c4c0af;
+}
+
+#comments li.pingback p {
+    margin: 0.5em 0;
+}
+
+/*****************************************************************
+ * mail form
+ *****************************************************************/
+
+form dl, dl.labels {
+    margin:     0em;
+    font-size:  100%;
+    margin-top: 0.5em
+}
+
+form dt, dl.labels dt {
+    float:         left;
+
+    width:         7em;
+    margin-bottom: 0.8em;
+    color:         #555;
+    text-align:    right;
+    font-weight:   normal;
+    position:      relative /*IEWin hack*/
+}
+
+form dd, dl.labels dd {
+    margin-left:   7.5em;
+    margin-bottom: 0.8em;
+    font-size:     100%;
+    font-style:    normal;
+    padding-left:  0.5em
+}
+
+form dd.submit, dl.labels dd.submit {
+    margin-top: 2em
+}
+
+div.entry-content div form dl dd br {
+    display: none;
+}
+
+/*****************************************************************
+ * contactform 7
+ *****************************************************************/
+
+div.wpcf7 {
+
+}
+
+div.wpcf7 input, .wpcf7 textarea {
+    width: 100%;
+}
+
+div.wpcf7 input.wpcf7-submit {
+    width: auto;
+}
+
+div.wpcf7-response-output {
+    font-weight:   normal;
+    margin:        inherit;
+    padding:       inherit;
+    margin-bottom: 1em;
+}
+
+div.wpcf7-mail-sent-ok {
+    border:      none;
+    color:       #489217;
+    font-size:   125%;
+    font-weight: bold;
+}
+
+span.wpcf7-not-valid-tip-no-ajax {
+    font-size: 80%;
+}
+
+span.wpcf7-not-valid-tip-no-ajax,
+div.wpcf7-validation-errors {
+    color: #d63c1e;
+}
+
+div.wpcf7-validation-errors {
+    border: none;
+}
+
+div.wpcf7-validation-errors {
+    font-size: inherit;
+}
+
+/*****************************************************************
+ * wp survey and quiz tool
+ *****************************************************************/
+
+form .wpst_question {
+    border-top:  1px solid #c4c0af;
+    margin-top:  1em;
+    padding-top: 1em;
+}
+form .wpst_question textarea {
+    width:       100%;
+    height:      15em;
+}
+form .wpst_question p {
+    font-size: 80%;
+}
+
+ul.wpsqt_multiple_question {
+    list-style-type: none;
+    padding: 0;
+}
+form .wpst_question span.wpsqt_likert_answer {
+    display: block;
+}
+form .wpst_question br {
+    display: none;
+}
 
 @media print {
     body {
@@ -286,7 +617,9 @@ div.child-pages ul ul {
     background-position: 0px 0px;
 }
 
-/* style-amricaleventslist-customizations.css */
+/*****************************************************************
+ * amr ical events list
+ *****************************************************************/
 
 .eventdate abbr,
 .enddate abbr {
