@@ -80,6 +80,12 @@ del {
     margin: 0 1em 0 0;
 }
 
+div.wp-caption {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 75%;
+}
+
 .entry-content p.wp-caption-text {
     margin:     0;
     padding:    0.3em;
@@ -391,10 +397,8 @@ form .wpst_question br {
     }
 
     #blog-title, #blog-description {
-        display:     inline;
-        font-size:   1em;
-        font-weight: normal;
-        font-style:  normal;
+        display: inline;
+        margin: 0;
     }
 
     .blog-title-comma {
@@ -413,21 +417,11 @@ form .wpst_question br {
 
 @media screen {
     a {
-        color: #146070;
+        color: rgba(139, 59, 141, 1);
     }
 
     a:hover {
         text-decoration: underline;
-    }
-
-    #content-inner, #sidebar-opaque {
-        -moz-box-shadow:    2px 2px 4px #a89a7c;
-        -webkit-box-shadow: 2px 2px 4px #a89a7c;
-        box-shadow:         2px 2px 4px #a89a7c;
-    }
-
-    #blog-title {
-        font-size: 2em;
     }
 
     #blog-description {
@@ -458,9 +452,10 @@ abbr {
     text-decoration: underline;
 }
 
-.entry-content p {
-    font-size:   100%;
-    line-height: 130%;
+.entry-content p,
+.entry-content li {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
 }
 
 #footer {
@@ -499,21 +494,21 @@ div.hentry + div.hentry {
 
 h1,
 .entry-title {
-    font-size: 2.5em;
-}
-
-h2 {
     font-size: 2em;
 }
 
-h3 {
+h2 {
     font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 h1 {
