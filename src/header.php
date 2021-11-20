@@ -61,7 +61,6 @@
 
 <div id="wrapper" class="hfeed">
     <div id="header">
-        <div id="master"></div>
         <div id="branding">
             <div id="blog-title">
                 <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>"
@@ -77,15 +76,45 @@
                 </h1>
             <?php } ?>
         </div>
-        <?php if (is_active_sidebar(THEME_WIDGETAREA_HEADER_ID)) { ?>
-            <div id="widget-area-header" class="widget-area">
-                <?php dynamic_sidebar(THEME_WIDGETAREA_HEADER_ID); ?>
+        <nav id="site-menu-button">
+            <button aria-expanded="false" aria-controls="menu">
+                <div id="site-menu-button-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
             </div>
-        <?php } ?>
+
+            </button>
         <div id="access">
             <div class="skip-link"><a href="#content"
                                       title="<?php _e('Skip to content', THEME_NAME) ?>"><?php _e('Skip to content', THEME_NAME) ?></a>
             </div>
         </div>
+        </nav>
     </div>
+    <nav id="site-menu">
+        <?php if ( is_active_sidebar( THEME_WIDGETAREA_ABOVEMENU_ID )) { ?>
+			<div id="widget-area-abovemenu" class="widget-area">
+				<?php dynamic_sidebar( THEME_WIDGETAREA_ABOVEMENU_ID ); ?>
+			</div>
+		<?php } ?>
+        <div class="site-menu-container">
+            <?php
+            wp_page_menu(array(
+                'sort_column' => 'menu_order',
+                'show_home'   => true,
+                // 'container' => 'nav',
+                // 'menu_class' => 'navigation',
+                // 'before' => '<div class="navigation-menu-container" hidden><ul>',
+                // 'after' => '</ul></div>',
+                'link_before' => '',
+                'link_after'  => '' ));
+            ?>
+        </div>
+		<?php if ( is_active_sidebar( THEME_WIDGETAREA_BELOWMENU_ID )) { ?>
+			<div id="widget-area-belowmenu" class="widget-area">
+				<?php dynamic_sidebar( THEME_WIDGETAREA_BELOWMENU_ID ); ?>
+			</div>
+		<?php } ?>
+    </nav>
     <div id="main">
