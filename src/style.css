@@ -957,7 +957,7 @@ article.event span.summary {
 
 #site-menu {
     opacity: 0.0;
-    transition: opacity 0.2s ease-in-out 0.0s;
+    transition: all 0.2s ease-in-out 0.0s;
 }
 #site-menu.expanded {
     opacity: 1.0;
@@ -981,7 +981,7 @@ article.event span.summary {
     height: 2px;
     width: 20px;
     background-color: rgb(46, 42, 37);
-    transition: transform 0.1s;
+    transition: all 0.2s ease-in-out 0.0s;
     left: 15px;
     position: absolute;
 }
@@ -995,7 +995,7 @@ article.event span.summary {
 }
 
 #site-menu-button-icon > div:last-child {
-    top: 30px
+    top: 30px;
 }
 
 button[aria-expanded="true"] #site-menu-button-icon > div:first-child {
