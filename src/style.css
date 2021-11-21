@@ -13,13 +13,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
 
 body {
-    color: #555;
-    background-color: rgb(250, 237, 212);
+    color: rgb(46, 42, 37);
+    background-color: #ffffff;
     font-family: Swift, Georgia, Times, serif;
 }
 
 del, strike {
-    color: rgb(167, 159, 146);
+    color: #aaaaaa;
 }
 
 h1,
@@ -32,6 +32,7 @@ h6,
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-style: normal;
+    letter-spacing: -0.4px;
 }
 
 #blog-title a {
@@ -168,7 +169,8 @@ div.wp-caption.alignleft img {
 #site-menu > div.site-menu-container ul.menu li > a,
 #site-menu > div.site-menu-container .menu > ul li > a,
 #site-menu > div.site-menu-container .widget_pages > ul li > a {
-    padding: 0.5em;
+    padding: 0.5em 1em;
+    letter-spacing: -0.4px;
 }
 
 #site-menu > div.site-menu-container .menu > ul {
@@ -224,7 +226,7 @@ div.wp-caption.alignleft img {
  *****************************************************************/
 
 #comments {
-    border-top: 1px solid #c4c0af;
+    border-top: 1px solid #aaaaaa;
     padding:    0.5em 0 0 0;
     margin:     0.5em 0 0 0;
 }
@@ -235,7 +237,7 @@ div.wp-caption.alignleft img {
 
 #comments li.comment,
 #comments li.pingback {
-    border-bottom: 1px solid #c4c0af;
+    border-bottom: 1px solid #cccccc;
 }
 
 #comments li.pingback p {
@@ -257,7 +259,7 @@ form dt, dl.labels dt {
 
     width:         7em;
     margin-bottom: 0.8em;
-    color:         #555;
+    /* color:         #555; */
     text-align:    right;
     font-weight:   normal;
     position:      relative /*IEWin hack*/
@@ -304,7 +306,7 @@ div.wpcf7-response-output {
 
 div.wpcf7-mail-sent-ok {
     border:      none;
-    color:       #489217;
+    color:       #489217; /* Change colour? */
     font-size:   125%;
     font-weight: bold;
 }
@@ -315,7 +317,7 @@ span.wpcf7-not-valid-tip-no-ajax {
 
 span.wpcf7-not-valid-tip-no-ajax,
 div.wpcf7-validation-errors {
-    color: #d63c1e;
+    color: #d63c1e;  /* Change colour? */
 }
 
 div.wpcf7-validation-errors {
@@ -331,7 +333,7 @@ div.wpcf7-validation-errors {
  *****************************************************************/
 
 form .wpst_question {
-    border-top:  1px solid #c4c0af;
+    border-top:  1px solid #aaaaaa;
     margin-top:  1em;
     padding-top: 1em;
 }
@@ -360,7 +362,7 @@ form .wpst_question br {
     }
 
     body, a, p, h1, h2, h3, h4, h5, h6 {
-        color: #000;
+        color: rgb(46, 42, 37);
     }
 
     .entry-content a {
@@ -445,8 +447,18 @@ abbr {
 
 .entry-content p,
 .entry-content li {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: 16px;
+    line-height: 24px;
+}
+.entry-content ol,
+.entry-content ul {
+    padding: 0 0 0 1.5em;
+    margin: 0.5em 0;
+}
+.entry-content ol ol,
+.entry-content ul ul {
+    padding: 0 0 0 1.5em;
+    margin: 0 0;
 }
 
 #footer {
@@ -473,7 +485,7 @@ div.hentry {
 }
 
 div.hentry + div.hentry {
-    border-top:  1px solid #c4c0af;
+    border-top:  1px solid #aaaaaa;
     margin-top:  1em;
     padding-top: 1em;
 }
@@ -486,21 +498,21 @@ div.hentry + div.hentry {
 
 h1,
 .entry-title {
-    font-size: 2em;
+    font-size: 26px;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 22px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 1.1em;
+    font-size: 18px;
 }
 
 h1 {
@@ -565,6 +577,11 @@ div.entry-meta, div.entry-utility, div.comment-meta, div.comment-utilities, div.
     margin: 0 0 0.5em;
 }
 
+div#site-info {
+    margin: 1em;
+    color: #aaaaaa
+}
+
 .entry-meta, .entry-utility, div.comment-meta, div.comment-utilities {
     text-align: right;
 }
@@ -574,7 +591,7 @@ div.entry-meta, div.entry-utility, div.comment-meta, div.comment-utilities, div.
 }
 
 .breadcrumbs {
-    border-bottom: 1px solid #c4c0af;
+    border-bottom: 1px solid #cccccc;
     padding:       0 0 0.5em;
 }
 
@@ -819,10 +836,15 @@ article.event span.summary {
         padding: 0;
     }
 
-    .entry-title {
+    /* .entry-title {
         font-size: 1.5em;
-    }
+    } */
 
+    blockquote {
+        margin:  0 1.5em;
+        padding: 0;
+    }
+    
     #header #branding {
         font-size: 80%;
         flex: 1;
@@ -837,12 +859,12 @@ article.event span.summary {
     }
 
     #content-inner {
-        padding: 1em;
+        padding: 1em 2em;
         margin: 0;
     }
 
     #footer {
-        margin: 1em 0 1em 0;
+        /* padding: 1em; */
     }
 
     #header {
@@ -851,7 +873,8 @@ article.event span.summary {
         display: flex;
         top: 0;
 
-        background: rgb(255, 251, 243);
+        background: #ffffff;
+        border-bottom:  1px solid #dddddd;
 
         height: 50px;
     }
@@ -861,7 +884,7 @@ article.event span.summary {
         visibility: hidden;
         flex: 0;
         top: 50px;
-        background: rgb(255, 251, 243);
+        background: #ffffff;
         width: 100%;
         z-index: 1;
         bottom: 0;
@@ -955,15 +978,15 @@ article.event span.summary {
     width: 50px;
 }
 #site-menu-button-icon > div {
-    height: 4px;
-    width: 30px;
-    background-color: #555;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(46, 42, 37);
     transition: transform 0.1s;
-    left: 10px;
+    left: 15px;
     position: absolute;
 }
 #site-menu-button-icon > div:first-child {
-    top: 14px
+    top: 16px
 }
 
 #site-menu-button-icon > div {
@@ -972,17 +995,17 @@ article.event span.summary {
 }
 
 #site-menu-button-icon > div:last-child {
-    top: 32px
+    top: 30px
 }
 
 button[aria-expanded="true"] #site-menu-button-icon > div:first-child {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
     opacity: 1.0;
 }
 button[aria-expanded="true"] #site-menu-button-icon > div {
     opacity: 0.0;
 }
 button[aria-expanded="true"] #site-menu-button-icon > div:last-child {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
     opacity: 1.0;
 }
