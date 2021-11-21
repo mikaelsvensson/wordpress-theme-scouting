@@ -31,8 +31,6 @@ define("THEME_WIDGETAREA_ABOVEMENU_NAME", "Above Menu");
 define("THEME_WIDGETAREA_ABOVEMENU_ID", "above_menu_widget_area");
 define("THEME_WIDGETAREA_BELOWMENU_NAME", "Below Menu");
 define("THEME_WIDGETAREA_BELOWMENU_ID", "below_menu_widget_area");
-define("THEME_WIDGETAREA_HEADER_NAME", "Header");
-define("THEME_WIDGETAREA_HEADER_ID", "header_widget_area");
 define("THEME_WIDGETAREA_FOOTER_NAME", "Footer");
 define("THEME_WIDGETAREA_FOOTER_ID", "footer_widget_area");
 
@@ -58,7 +56,6 @@ load_theme_textdomain( THEME_NAME );
 $preset_widgets = array (
 		THEME_WIDGETAREA_ABOVEMENU_ID  => array( 'recentposts' ),
 		THEME_WIDGETAREA_BELOWMENU_ID  => array( 'pages' ),
-		THEME_WIDGETAREA_HEADER_ID  => array( 'search' ),
 		THEME_WIDGETAREA_FOOTER_ID  => array(  )
 		);
 if ( isset( $_GET['activated'] ) ) {
@@ -93,14 +90,6 @@ function nackasmu_init_widgetareas() {
 	register_sidebar( array (
 			"name" => THEME_WIDGETAREA_BELOWMENU_NAME,
 			"id" => THEME_WIDGETAREA_BELOWMENU_ID,
-			"before_widget" => THEME_WIDGETAREA_BEFOREWIDGET,
-			"after_widget" => THEME_WIDGETAREA_AFTERWIDGET,
-			"before_title" => THEME_WIDGETAREA_BEFORETITLE,
-			"after_title" => THEME_WIDGETAREA_AFTERTITLE,
-			) );
-	register_sidebar( array (
-			"name" => THEME_WIDGETAREA_HEADER_NAME,
-			"id" => THEME_WIDGETAREA_HEADER_ID,
 			"before_widget" => THEME_WIDGETAREA_BEFOREWIDGET,
 			"after_widget" => THEME_WIDGETAREA_AFTERWIDGET,
 			"before_title" => THEME_WIDGETAREA_BEFORETITLE,
