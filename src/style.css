@@ -225,7 +225,7 @@ div.wp-caption.alignleft img {
  * comments
  *****************************************************************/
 
-#comments {
+#comments-list {
     border-top: 1px solid #aaaaaa;
     padding:    0.5em 0 0 0;
     margin:     0.5em 0 0 0;
@@ -574,12 +574,12 @@ form {
 div.entry-meta, div.entry-utility, div.comment-meta, div.comment-utilities, div.breadcrumbs, div#site-info {
     font-family: 'Poppins', sans-serif;
     font-size: 80%;
+    color: #aaaaaa;
     margin: 0 0 0.5em;
 }
 
 div#site-info {
     margin: 1em;
-    color: #aaaaaa
 }
 
 .entry-meta, .entry-utility, div.comment-meta, div.comment-utilities {
