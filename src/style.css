@@ -1,5 +1,5 @@
 /*
- Theme Name: Scouting Light
+ Theme Name: Scouting Light Beta
  Theme URI: http://www.nackasmu.se
  Description: A nature-inspired theme with multiple widget areas and transparent header images. Developed for the Girl and Boy Scouts of Björknäs in Sweden. The theme looks different (simpler and faster) when the user is using a mobile phone.
  Author: Mikael Svensson
@@ -18,8 +18,8 @@ body {
     font-family: Swift, Georgia, Times, serif;
 }
 
-del {
-    color: #aaa;
+del, strike {
+    color: rgb(167, 159, 146);
 }
 
 h1,
@@ -910,7 +910,12 @@ article.event span.summary {
     }
 
     body #site-menu > div.site-menu-container .menu {
-        font-size: 1.1em;
+        font-size: 1.0em;
+    }
+
+    body #site-menu > div.site-menu-container .menu ul.children,
+    body #site-menu > div.site-menu-container .widget_links {
+        font-size: 0.9em;
     }
 
     /* style-amricaleventslist-customizations.css */
