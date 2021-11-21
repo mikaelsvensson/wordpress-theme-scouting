@@ -4,10 +4,9 @@ window.addEventListener('load', function (event) {
     menuButton.addEventListener('click', function (event) {
         const isOpen = JSON.parse(menuButton.getAttribute('aria-expanded'))
         menuButton.setAttribute('aria-expanded', !isOpen)
-        // menuContent.hidden = !menuContent.hidden
         menuContent.classList.toggle('expanded')
 
-        // if (!menuContent.hidden) {
+        // if (isOpen) {
         //     menuContent.querySelector('a').focus()
         // }
     })
