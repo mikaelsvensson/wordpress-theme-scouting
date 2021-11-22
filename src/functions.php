@@ -1,6 +1,4 @@
 <?php
-//require_once('lib/Mobile-Detect-2.6.0/Mobile_Detect.php');
-
 define("THEME_NAME", "scouting");
 define("THEME_NAME_PRETTY", "Scouting");
 
@@ -33,10 +31,6 @@ define("THEME_WIDGETAREA_ABOVEMENU_NAME", "Above Menu");
 define("THEME_WIDGETAREA_ABOVEMENU_ID", "above_menu_widget_area");
 define("THEME_WIDGETAREA_BELOWMENU_NAME", "Below Menu");
 define("THEME_WIDGETAREA_BELOWMENU_ID", "below_menu_widget_area");
-define("THEME_WIDGETAREA_BELOWSIDEBAR_NAME", "Below Sidebar");
-define("THEME_WIDGETAREA_BELOWSIDEBAR_ID", "transparent_sidebar_widget_area");
-define("THEME_WIDGETAREA_HEADER_NAME", "Header");
-define("THEME_WIDGETAREA_HEADER_ID", "header_widget_area");
 define("THEME_WIDGETAREA_FOOTER_NAME", "Footer");
 define("THEME_WIDGETAREA_FOOTER_ID", "footer_widget_area");
 
@@ -50,13 +44,18 @@ if ( is_readable($locale_file) ) {
 
 add_action( "init", "nackasmu_init_widgetareas" );
 
+function nackasmu_adding_scripts() {
+	wp_register_script('nackasmu_theme_script', get_template_directory_uri().'/menu.js', array(), filemtime(__DIR__ .'/menu.js'), true);
+	wp_enqueue_script('nackasmu_theme_script');
+}
+	
+add_action( 'wp_enqueue_scripts', 'nackasmu_adding_scripts' );  	
+
 load_theme_textdomain( THEME_NAME );
 
 $preset_widgets = array (
 		THEME_WIDGETAREA_ABOVEMENU_ID  => array( 'recentposts' ),
 		THEME_WIDGETAREA_BELOWMENU_ID  => array( 'pages' ),
-		THEME_WIDGETAREA_BELOWSIDEBAR_ID  => array( 'links' ),
-		THEME_WIDGETAREA_HEADER_ID  => array( 'search' ),
 		THEME_WIDGETAREA_FOOTER_ID  => array(  )
 		);
 if ( isset( $_GET['activated'] ) ) {
@@ -91,22 +90,6 @@ function nackasmu_init_widgetareas() {
 	register_sidebar( array (
 			"name" => THEME_WIDGETAREA_BELOWMENU_NAME,
 			"id" => THEME_WIDGETAREA_BELOWMENU_ID,
-			"before_widget" => THEME_WIDGETAREA_BEFOREWIDGET,
-			"after_widget" => THEME_WIDGETAREA_AFTERWIDGET,
-			"before_title" => THEME_WIDGETAREA_BEFORETITLE,
-			"after_title" => THEME_WIDGETAREA_AFTERTITLE,
-			) );
-	register_sidebar( array (
-			"name" => THEME_WIDGETAREA_BELOWSIDEBAR_NAME,
-			"id" => THEME_WIDGETAREA_BELOWSIDEBAR_ID,
-			"before_widget" => THEME_WIDGETAREA_BEFOREWIDGET,
-			"after_widget" => THEME_WIDGETAREA_AFTERWIDGET,
-			"before_title" => THEME_WIDGETAREA_BEFORETITLE,
-			"after_title" => THEME_WIDGETAREA_AFTERTITLE,
-			) );
-	register_sidebar( array (
-			"name" => THEME_WIDGETAREA_HEADER_NAME,
-			"id" => THEME_WIDGETAREA_HEADER_ID,
 			"before_widget" => THEME_WIDGETAREA_BEFOREWIDGET,
 			"after_widget" => THEME_WIDGETAREA_AFTERWIDGET,
 			"before_title" => THEME_WIDGETAREA_BEFORETITLE,

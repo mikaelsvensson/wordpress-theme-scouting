@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div id="container">
-    <?php get_sidebar(); ?>
 	<div id="content">
 	    <div id="content-inner">
 			<div id="post-0" class="post error404 not-found">
