@@ -10,7 +10,6 @@ $shortname = THEME_NAME; //This should be a shortened version of your theme name
 $entry_metadata_optionvalues = array(
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_AUTHOR ,
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_PUBLISHINGDATE ,
-        NACKASMU_OPTIONVALUE_ENTRYMETADATA_SHAREONFACEBOOK ,
         NACKASMU_OPTIONVALUE_ENTRYMETADATA_CATSANDTAGS);
 $entry_utilities_optionvalues = array(
 		NACKASMU_OPTIONVALUE_ENTRYUTILITIES_PRINTLINK ,
@@ -39,12 +38,6 @@ $options_configuration = array (
             "type" => "checkbox",
             "std" => implode( ',' , $entry_utilities_optionvalues),
             "options" => $entry_utilities_optionvalues
-    ),
-    array(  "name" => "Facebook Page",
-            "desc" => "Add the Facebook Like button under the sidebar by specifying you Facebook Page address here.",
-            "id" => NACKASMU_OPTION_FACEBOOKURL,
-            "std" => "https://www.facebook.com/YOUR_NAME_HERE",
-            "type" => "text"
     ),
 /*
     array(  "name" => "Radio Selection Set",

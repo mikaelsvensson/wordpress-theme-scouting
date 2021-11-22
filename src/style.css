@@ -214,7 +214,6 @@ div.wp-caption.alignleft img {
 
 @media print {
     #footer,
-    .fb-share-button,
     .type-post .entry-meta {
         display: none;
     }
