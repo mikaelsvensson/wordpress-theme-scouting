@@ -40,9 +40,9 @@ h6,
     color: inherit;
 }
 
-    #footer {
-        font-size: 90%;
-    }
+#footer {
+    font-size: 90%;
+}
 
 .aligncenter {
 }
@@ -61,13 +61,13 @@ h6,
 }
 
 .aligncenter {
-    margin:  0 auto;
+    margin: 0 auto;
     display: block;
 }
 
 .alignright {
-    float:               right;
-    padding:             10px;
+    float: right;
+    padding: 10px;
     background-position: top right;
 }
 
@@ -78,7 +78,7 @@ h6,
 }
 
 .alignleft {
-    float:  left;
+    float: left;
     margin: 0 1em 0 0;
 }
 
@@ -89,10 +89,9 @@ div.wp-caption {
 }
 
 .entry-content p.wp-caption-text {
-    margin:     0;
-    padding:    0.3em;
+    margin: 0;
+    padding: 0.3em;
     text-align: center;
-    font-size:  75%;
 }
 
 .alignright p.wp-caption-text,
@@ -150,18 +149,18 @@ div.wp-caption.alignleft img {
 #site-menu > div.site-menu-container .widget-title,
 #site-menu > div.site-menu-container a {
     font-size: 100%;
-    display:   block;
+    display: block;
 }
 
 #site-menu > div.site-menu-container ul {
     padding: 0 0 0 1.5em;
-    margin:  0;
+    margin: 0;
 }
 
 #site-menu > div.site-menu-container li {
     list-style-type: none;
-    padding:         0;
-    margin:          0;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -174,7 +173,7 @@ div.wp-caption.alignleft img {
 }
 
 #site-menu > div.site-menu-container .menu > ul {
-    padding-left:   0;
+    padding-left: 0;
     padding-bottom: 0.5em;
 }
 
@@ -195,7 +194,7 @@ div.wp-caption.alignleft img {
 }
 
 #widget-area-belowsidebar ul {
-    margin:  0;
+    margin: 0;
     padding: 0;
 }
 
@@ -209,8 +208,8 @@ div.wp-caption.alignleft img {
 
 #widget-area-footer .widget_links ul {
     list-style: none;
-    margin:     0;
-    padding:    0;
+    margin: 0;
+    padding: 0;
 }
 
 @media print {
@@ -226,9 +225,9 @@ div.wp-caption.alignleft img {
  *****************************************************************/
 
 #comments-list {
-    border-top: 1px solid #aaaaaa;
-    padding:    0.5em 0 0 0;
-    margin:     0.5em 0 0 0;
+    border-top: 1px solid #c4c0af;
+    padding: 0.5em 0 0 0;
+    margin: 0.5em 0 0 0;
 }
 
 #comments h3 {
@@ -249,15 +248,15 @@ div.wp-caption.alignleft img {
  *****************************************************************/
 
 form dl, dl.labels {
-    margin:     0em;
-    font-size:  100%;
+    margin: 0em;
+    font-size: 100%;
     margin-top: 0.5em
 }
 
 form dt, dl.labels dt {
-    float:         left;
+    float: left;
 
-    width:         7em;
+    width: 7em;
     margin-bottom: 0.8em;
     /* color:         #555; */
     text-align:    right;
@@ -266,11 +265,11 @@ form dt, dl.labels dt {
 }
 
 form dd, dl.labels dd {
-    margin-left:   7.5em;
+    margin-left: 7.5em;
     margin-bottom: 0.8em;
-    font-size:     100%;
-    font-style:    normal;
-    padding-left:  0.5em
+    font-size: 100%;
+    font-style: normal;
+    padding-left: 0.5em
 }
 
 form dd.submit, dl.labels dd.submit {
@@ -298,9 +297,9 @@ div.wpcf7 input.wpcf7-submit {
 }
 
 div.wpcf7-response-output {
-    font-weight:   normal;
-    margin:        inherit;
-    padding:       inherit;
+    font-weight: normal;
+    margin: inherit;
+    padding: inherit;
     margin-bottom: 1em;
 }
 
@@ -333,14 +332,16 @@ div.wpcf7-validation-errors {
  *****************************************************************/
 
 form .wpst_question {
-    border-top:  1px solid #aaaaaa;
-    margin-top:  1em;
+    border-top: 1px solid #c4c0af;
+    margin-top: 1em;
     padding-top: 1em;
 }
+
 form .wpst_question textarea {
-    width:       100%;
-    height:      15em;
+    width: 100%;
+    height: 15em;
 }
+
 form .wpst_question p {
     font-size: 80%;
 }
@@ -349,9 +350,11 @@ ul.wpsqt_multiple_question {
     list-style-type: none;
     padding: 0;
 }
+
 form .wpst_question span.wpsqt_likert_answer {
     display: block;
 }
+
 form .wpst_question br {
     display: none;
 }
@@ -370,24 +373,24 @@ form .wpst_question br {
     }
 
     #wrapper, #header, #content, #footer {
-        width:   100%;
-        margin:  0;
+        width: 100%;
+        margin: 0;
         padding: 0;
     }
 
     #footer {
-        margin:     1em 0 0 0;
-        padding:    1em 0 0 0;
+        margin: 1em 0 0 0;
+        padding: 1em 0 0 0;
         font-style: italic;
-        font-size:  90%;
+        font-size: 90%;
         border-top: 0.05em solid;
     }
 
     #header {
-        margin:        1em 0 2em 0;
-        padding:       0 0 1em 0;
-        font-style:    italic;
-        font-size:     100%;
+        margin: 1em 0 2em 0;
+        padding: 0 0 1em 0;
+        font-style: italic;
+        font-size: 100%;
     }
 
     .breadcrumbs, #site-menu, #respond, .entry-utility, div.comment-utilities {
@@ -423,12 +426,12 @@ form .wpst_question br {
 
     #blog-description {
         font-size: 1.6em;
-        margin:    -0.2em 0 0 0.1em;
+        margin: -0.2em 0 0 0.1em;
     }
 }
 
 body {
-    margin:  0;
+    margin: 0;
     padding: 0;
 }
 
@@ -438,7 +441,7 @@ a {
 
 abbr {
     text-decoration: none;
-    border:          none;
+    border: none;
 }
 
 .entry-content a {
@@ -472,7 +475,7 @@ abbr {
 }
 
 #blog-description {
-    font-size:   2em;
+    font-size: 2em;
     font-weight: normal;
 }
 
@@ -485,15 +488,15 @@ div.hentry {
 }
 
 div.hentry + div.hentry {
-    border-top:  1px solid #aaaaaa;
-    margin-top:  1em;
+    border-top: 1px solid #c4c0af;
+    margin-top: 1em;
     padding-top: 1em;
 }
 
 #widget-area-header {
     position: absolute;
-    bottom:   60px;
-    right:    0;
+    bottom: 60px;
+    right: 0;
 }
 
 h1,
@@ -516,7 +519,7 @@ h6 {
 }
 
 h1 {
-    margin:  0 0 0.3em 0;
+    margin: 0 0 0.3em 0;
     padding: 0;
 }
 
@@ -533,7 +536,7 @@ img {
 }
 
 blockquote {
-    margin:  0 2em;
+    margin: 0 2em;
     padding: 0;
 }
 
@@ -541,7 +544,7 @@ code,
 var,
 tt {
     font-family: monospace;
-    font-style:  normal;
+    font-style: normal;
 }
 
 td,
@@ -562,12 +565,12 @@ address {
 }
 
 form {
-    margin:  0;
+    margin: 0;
     padding: 0;
 }
 
 .page-link a {
-    font-size:      150%;
+    font-size: 150%;
     vertical-align: -10%;
 }
 
@@ -591,8 +594,8 @@ div#site-info {
 }
 
 .breadcrumbs {
-    border-bottom: 1px solid #cccccc;
-    padding:       0 0 0.5em;
+    border-bottom: 1px solid #c4c0af;
+    padding: 0 0 0.5em;
 }
 
 div.child-pages {
@@ -605,12 +608,12 @@ div.child-pages li {
 
 div.child-pages ul {
     padding: 0;
-    margin:  0.5em 0 0 0;
+    margin: 0.5em 0 0 0;
 }
 
 div.child-pages ul ul {
     padding-left: 1em;
-    margin:       0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 .button-icon {
