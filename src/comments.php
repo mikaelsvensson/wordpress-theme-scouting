@@ -1,4 +1,4 @@
-<div id="comments" class="<?php print !nackasmu_option_is_true( NACKASMU_OPTION_PRINTCOMMENTS ) ? 'hide-comments-on-print' : '' ; ?>"><?php /* Run some checks for bots and password protected posts */ ?>
+<div id="comments" class="<?php print !nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES, 'entryutilities_printcomments' ) ? 'hide-comments-on-print' : '' ; ?>"><?php /* Run some checks for bots and password protected posts */ ?>
 <?php
 $req = get_option('require_name_email'); // Checks if fields are required.
 if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) ) {
