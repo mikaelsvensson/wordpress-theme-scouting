@@ -23,7 +23,7 @@
                 <div class="entry-meta">
                     <?php include( "include-entry-meta.php" ); ?>
 					<?php 
-                    if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYMETADATA , NACKASMU_OPTIONVALUE_ENTRYMETADATA_CATSANDTAGS ) ) {
+                    if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYMETADATA , 'entrymetadata_catsandtags' ) ) {
                         print '<span class="catsandtags-links">';
 						printf( __( 'This entry was posted in %1$s%2$s.', THEME_NAME ),
 								get_the_category_list(', '),

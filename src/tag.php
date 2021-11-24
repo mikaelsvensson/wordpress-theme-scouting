@@ -26,7 +26,7 @@
 					</div>
 	                <div class="entry-meta">
 	                    <?php include( "include-entry-meta.php" ); ?>
-						<?php if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYMETADATA , NACKASMU_OPTIONVALUE_ENTRYMETADATA_CATSANDTAGS ) ) { ?>
+						<?php if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYMETADATA , 'entrymetadata_catsandtags' ) ) { ?>
 							<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', THEME_NAME ); ?></span><?php echo get_the_category_list(', '); ?>.</span>
 							<?php if ( $nackasmu_tags = nackasmu_tags(', ') ) { ?>      
 								<span class="tag-links"><?php printf( __( 'Also tagged %s', THEME_NAME ), $nackasmu_tags ) ?>.</span>

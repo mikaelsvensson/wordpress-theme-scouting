@@ -1,5 +1,5 @@
 <?php
-if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_COMMENTANDPINGTRACKBACKLINKS ) ) {
+if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES , 'entryutilities_commentandpingtrackbacklinks' ) ) {
                     printf( __( 'Follow any comments here with the <a href="%2$s" title="Comments RSS to %1$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>. ', THEME_NAME ),
                             the_title_attribute('echo=0'),
                             comments_rss() );

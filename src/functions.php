@@ -139,12 +139,12 @@ function nackasmu_custom_comments($comment, $args, $depth) {
                 'after' => '.</span> '
                 )));
     }
-    if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_EDITLINK ) ) {
+    if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES , 'entryutilities_editlink' ) ) {
 		edit_comment_link(__( 'Edit' , THEME_NAME ),
 				'<span class="edit-link">',
 				'.</span> ');
     }
-    if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_BOOKMARKPERMALINK ) ) {
+    if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES , 'entryutilities_bookmarkpermalink' ) ) {
 		printf('<span class="permalink"><a href="#comment-%1$s" title="%2$s">%3$s</a>.</span> ',
 			    get_comment_ID(),
 			    __( 'Permalink to this comment' , THEME_NAME ),
@@ -172,7 +172,7 @@ function nackasmu_custom_pings($comment, $args, $depth) {
     }
     print '</div>';
 	print( '<div class="comment-utilities">' );
-	if ( nackasmu_multichoiceoption_is_set( NACKASMU_OPTION_ENTRYUTILITIES , NACKASMU_OPTIONVALUE_ENTRYUTILITIES_EDITLINK ) ) {
+	if ( nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES , 'entryutilities_editlink' ) ) {
 		edit_comment_link(__( 'Edit' , THEME_NAME ),
 	            '<span class="edit-link">',
 	            '.</span> ');
