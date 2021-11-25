@@ -231,6 +231,10 @@ function nackasmu_tags($glue) {
 function nackasmu_get_breadcrumbs() {
     global $post;
 
+	if ( ! nackasmu_is_setting_enabled( NACKASMU_OPTION_ENTRYUTILITIES , 'entryutilities_breadcrumbs' ) ) {
+		return '';
+	}
+
     $separator = '  &rsaquo; '; // what to place between the pages
 
     echo "<div class='breadcrumbs'>";

@@ -7,7 +7,8 @@ function nackasmu_customize_register_boolean_setting(
     $wp_customize, 
     $section_id,
     $setting_id,
-    $name
+    $name,
+    $default = false
 ) {
     $default = nackasmu_is_setting_enabled($section_id, $setting_id);
 
@@ -56,6 +57,7 @@ function nackasmu_customize_register( $wp_customize ) {
     nackasmu_customize_register_boolean_setting( $wp_customize, NACKASMU_OPTION_ENTRYUTILITIES, 'entryutilities_commentandpingtrackbacklinks', "Comment and ping/trackback links");
     nackasmu_customize_register_boolean_setting( $wp_customize, NACKASMU_OPTION_ENTRYUTILITIES, 'entryutilities_editlink', "Edit link");
     nackasmu_customize_register_boolean_setting( $wp_customize, NACKASMU_OPTION_ENTRYUTILITIES, 'entryutilities_printcomments', "Include comments when printing");
+    nackasmu_customize_register_boolean_setting( $wp_customize, NACKASMU_OPTION_ENTRYUTILITIES, 'entryutilities_breadcrumbs', "Show breadcrumbs on pages", true);
 }
 
 add_action( 'customize_register', 'nackasmu_customize_register' );
