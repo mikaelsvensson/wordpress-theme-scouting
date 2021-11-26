@@ -193,47 +193,48 @@ div.wp-caption.alignleft img {
  * side bar
  *****************************************************************/
 
-#site-menu > div.site-menu-container {
+#site-menu {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
-#site-menu > div.site-menu-container .widget-title {
-    margin: 0;
+#site-menu .widget-container,
+#site-menu .menu,
+#site-menu .widget-title {
+    margin: 5px 15px;
 }
 
-#site-menu > div.site-menu-container .widget-title,
-#site-menu > div.site-menu-container a {
+#site-menu .widget-title,
+#site-menu a {
     font-size: 100%;
     display: block;
 }
 
-#site-menu > div.site-menu-container ul {
+#site-menu ul {
     padding: 0 0 0 1.5em;
-    margin: 0;
 }
 
-#site-menu > div.site-menu-container li {
+#site-menu li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-
-#site-menu > div.site-menu-container .widget-title,
-#site-menu > div.site-menu-container ul.menu li > a,
-#site-menu > div.site-menu-container .menu > ul li > a,
-#site-menu > div.site-menu-container .widget_pages > ul li > a {
-    padding: 0.5em 1em;
+#site-menu .widget-title,
+#site-menu .menu > ul li > a,
+#site-menu .widget-container > ul li > a {
+    padding: 0.5em 0em;
     letter-spacing: -0.4px;
 }
 
-#site-menu > div.site-menu-container .menu > ul {
+#site-menu .widget-container > ul,
+#site-menu .menu > ul {
     padding-left: 0;
     padding-bottom: 0.5em;
+    margin: 0;
 }
 
-#site-menu > div.site-menu-container .menu ul ul.children ul.children {
+#site-menu .menu ul ul.children ul.children {
     display: none;
 }
 
@@ -592,7 +593,6 @@ div.child-pages ul ul {
 }
 
 /* Desktop */
-
 @media screen and (min-width: 768px) {
     blockquote,
     q {
@@ -621,20 +621,26 @@ div.child-pages ul ul {
         opacity: 1.0;
     }
 
-    #site-menu > div.site-menu-container {
+    #site-menu {
         width: 14em;
         overflow: hidden;
     }
 
+    #site-menu .widget-container,
+    #site-menu .menu,
+    #site-menu .widget-title {
+        margin: 5px 0px;
+    }
+    
     nav#site-menu-button {
         display: none;
     }
 
-    #site-menu > div.site-menu-container .menu > ul > li > a {
+    #site-menu .menu > ul > li > a {
         padding-left: 0;
     }
 
-    #site-menu > div.site-menu-container .menu ul ul > li > a {
+    #site-menu .menu ul ul > li > a {
         padding: 0 0.5em;
     }
 
@@ -650,12 +656,13 @@ div.child-pages ul ul {
         height: 110px;
     }
 
-    body #site-menu > div.site-menu-container .menu {
+    body #site-menu .menu {
         font-size: 12pt;
     }
 
-    body #site-menu > div.site-menu-container .menu ul.children,
-    body #site-menu > div.site-menu-container .widget_links {
+    body #site-menu .widget_recent_entries,
+    body #site-menu .menu ul.children,
+    body #site-menu .widget_links {
         font-size: 10pt;
     }
 
