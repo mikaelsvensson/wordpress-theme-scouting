@@ -292,4 +292,26 @@ function nackasmu_print_child_pages($id) {
 	   print '</div>';
 	}
 }
+
+function nackasmu_theme_setup() {
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-width' => true,
+	) );
+}
+add_action( 'after_setup_theme', 'nackasmu_theme_setup' );
+
+function nackasmu_print_logo() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	if (is_numeric ($custom_logo_id)) {
+		$custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+		$link_content = sprintf('<img src="%s" alt="">', esc_url( $custom_logo_url ));
+	} else {
+		$link_content = sprintf('<div id="blog-title">%s</div>', get_bloginfo('name'));
+		// Add blog description?
+	}
+	printf('<a href="%s/" title="%s" rel="home">%s</a>', get_bloginfo('url'), get_bloginfo('name'), $link_content);
+}
+
 ?>

@@ -34,6 +34,10 @@
           type="text/css"
           href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style.css')?>"/>
 
+    <link rel="stylesheet"
+          type="text/css"
+          href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style-plugins.css')?>"/>
+
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 
     <?php wp_head(); ?>
@@ -47,22 +51,10 @@
 
 
 <body>
-<div id="wrapper" class="hfeed">
-    <div id="header">
-        <div id="branding">
-            <div id="blog-title">
-                <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>"
-                         rel="home"><?php bloginfo('name') ?></a><span class="blog-title-comma">,</span></span>
-            </div>
-            <?php if (is_home() || is_front_page()) { ?>
-                <div id="blog-description">
-                    <?php bloginfo('description') ?>
-                </div>
-            <?php } else { ?>
-                <h1 id="blog-description">
-                    <?php bloginfo('description') ?>
-                </h1>
-            <?php } ?>
+<div id="nackasmu-header-container">
+    <div class="nackasmu-content-wrapper">
+        <div id="nackasmu-logo">
+            <?php nackasmu_print_logo(); ?>
         </div>
         <nav id="site-menu-button">
             <button aria-expanded="false" aria-controls="menu">
@@ -70,16 +62,15 @@
                     <div></div>
                     <div></div>
                     <div></div>
-            </div>
-
+                </div>
             </button>
-        <div id="access">
-            <div class="skip-link"><a href="#content"
-                                      title="<?php _e('Skip to content', THEME_NAME) ?>"><?php _e('Skip to content', THEME_NAME) ?></a>
+            <div id="access">
+                <div class="skip-link"><a href="#content" title="<?php _e('Skip to content', THEME_NAME) ?>"><?php _e('Skip to content', THEME_NAME) ?></a></div>
             </div>
-        </div>
         </nav>
     </div>
+</div>
+<div class="wrapper" class="hfeed">
     <nav id="site-menu">
         <?php if ( is_active_sidebar( THEME_WIDGETAREA_ABOVEMENU_ID )) { ?>
 			<div id="widget-area-abovemenu" class="widget-area">

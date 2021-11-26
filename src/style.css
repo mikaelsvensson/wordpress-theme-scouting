@@ -35,19 +35,75 @@ h6,
     letter-spacing: -0.4px;
 }
 
-#blog-title a {
+cite {
+    font-style: normal;
+}
+
+a {
+    color: rgba(139, 59, 141, 1);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nackasmu-logo {
+    font-size: 80%;
+    flex: 1;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+#nackasmu-logo a {
     text-decoration: none;
     color: inherit;
 }
 
+#nackasmu-header-container {
+    margin: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    top: 0;
+
+    background: #ffffff;
+    border-bottom:  1px solid #dddddd;
+
+    height: 50px;
+}
+
+.nackasmu-content-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#nackasmu-logo img {
+    height: 30px;
+    display: block;
+    object-fit: contain;
+    object-position: left;
+    margin: 10px 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .nackasmu-content-wrapper {
+        width: 800px;
+    }
+
+    #nackasmu-logo img {
+        height: 50px;
+        margin: 25px 0px;
+    }
+
+    #nackasmu-header-container {
+        position: relative;
+        height: 100px;
+    }
+}
+
 #footer {
     font-size: 90%;
-}
-
-.aligncenter {
-}
-
-.alignleft {
 }
 
 /*****************************************************************
@@ -58,6 +114,11 @@ h6,
 .entry-utility,
 .post {
     clear: both;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1em 0 0;
 }
 
 .aligncenter {
@@ -75,11 +136,6 @@ h6,
     .alignright {
         margin: 0;
     }
-}
-
-.alignleft {
-    float: left;
-    margin: 0 1em 0 0;
 }
 
 div.wp-caption {
@@ -137,47 +193,48 @@ div.wp-caption.alignleft img {
  * side bar
  *****************************************************************/
 
-#site-menu > div.site-menu-container {
+#site-menu {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
-#site-menu > div.site-menu-container .widget-title {
-    margin: 0;
+#site-menu .widget-container,
+#site-menu .menu,
+#site-menu .widget-title {
+    margin: 5px 15px;
 }
 
-#site-menu > div.site-menu-container .widget-title,
-#site-menu > div.site-menu-container a {
+#site-menu .widget-title,
+#site-menu a {
     font-size: 100%;
     display: block;
 }
 
-#site-menu > div.site-menu-container ul {
+#site-menu ul {
     padding: 0 0 0 1.5em;
-    margin: 0;
 }
 
-#site-menu > div.site-menu-container li {
+#site-menu li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-
-#site-menu > div.site-menu-container .widget-title,
-#site-menu > div.site-menu-container ul.menu li > a,
-#site-menu > div.site-menu-container .menu > ul li > a,
-#site-menu > div.site-menu-container .widget_pages > ul li > a {
-    padding: 0.5em 1em;
+#site-menu .widget-title,
+#site-menu .menu > ul li > a,
+#site-menu .widget-container > ul li > a {
+    padding: 0.5em 0em;
     letter-spacing: -0.4px;
 }
 
-#site-menu > div.site-menu-container .menu > ul {
+#site-menu .widget-container > ul,
+#site-menu .menu > ul {
     padding-left: 0;
     padding-bottom: 0.5em;
+    margin: 0;
 }
 
-#site-menu > div.site-menu-container .menu ul ul.children ul.children {
+#site-menu .menu ul ul.children ul.children {
     display: none;
 }
 
@@ -242,136 +299,44 @@ div.wp-caption.alignleft img {
     margin: 0.5em 0;
 }
 
-/*****************************************************************
- * mail form
- *****************************************************************/
-
-form dl, dl.labels {
-    margin: 0em;
-    font-size: 100%;
-    margin-top: 0.5em
-}
-
-form dt, dl.labels dt {
-    float: left;
-
-    width: 7em;
-    margin-bottom: 0.8em;
-    /* color:         #555; */
-    text-align:    right;
-    font-weight:   normal;
-    position:      relative /*IEWin hack*/
-}
-
-form dd, dl.labels dd {
-    margin-left: 7.5em;
-    margin-bottom: 0.8em;
-    font-size: 100%;
-    font-style: normal;
-    padding-left: 0.5em
-}
-
-form dd.submit, dl.labels dd.submit {
-    margin-top: 2em
-}
-
-div.entry-content div form dl dd br {
-    display: none;
-}
-
-/*****************************************************************
- * contactform 7
- *****************************************************************/
-
-div.wpcf7 {
-
-}
-
-div.wpcf7 input, .wpcf7 textarea {
-    width: 100%;
-}
-
-div.wpcf7 input.wpcf7-submit {
-    width: auto;
-}
-
-div.wpcf7-response-output {
-    font-weight: normal;
-    margin: inherit;
-    padding: inherit;
-    margin-bottom: 1em;
-}
-
-div.wpcf7-mail-sent-ok {
-    border:      none;
-    color:       #489217; /* Change colour? */
-    font-size:   125%;
-    font-weight: bold;
-}
-
-span.wpcf7-not-valid-tip-no-ajax {
-    font-size: 80%;
-}
-
-span.wpcf7-not-valid-tip-no-ajax,
-div.wpcf7-validation-errors {
-    color: #d63c1e;  /* Change colour? */
-}
-
-div.wpcf7-validation-errors {
-    border: none;
-}
-
-div.wpcf7-validation-errors {
-    font-size: inherit;
-}
-
-/*****************************************************************
- * wp survey and quiz tool
- *****************************************************************/
-
-form .wpst_question {
-    border-top: 1px solid #c4c0af;
-    margin-top: 1em;
-    padding-top: 1em;
-}
-
-form .wpst_question textarea {
-    width: 100%;
-    height: 15em;
-}
-
-form .wpst_question p {
-    font-size: 80%;
-}
-
-ul.wpsqt_multiple_question {
-    list-style-type: none;
-    padding: 0;
-}
-
-form .wpst_question span.wpsqt_likert_answer {
-    display: block;
-}
-
-form .wpst_question br {
-    display: none;
-}
-
 @media print {
     body {
         font-size: 11pt;
+        background-color: #ffffff;
     }
 
     body, a, p, h1, h2, h3, h4, h5, h6 {
-        color: rgb(46, 42, 37);
+        color: #000000;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     .entry-content a {
         text-decoration: none !important;
     }
 
-    #wrapper, #header, #content, #footer {
+    .nackasmu-content-wrapper {
+        width: 100%;
+    }
+
+    #nackasmu-logo img {
+        height: 30pt;
+        margin: 0pt 0pt 30pt 0pt;
+    }
+
+    #nackasmu-header-container {
+        position: relative;
+        height: 60pt;
+        border-bottom: none;
+    }
+
+    nav#site-menu-button {
+        display: none;
+    }
+
+    .wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -409,20 +374,12 @@ form .wpst_question br {
         display: inline;
     }
 
-    #notwimpy {
-        display: none;
+    #content, #footer {
+        margin: 0 0 0 0;
     }
 }
 
 @media screen {
-    a {
-        color: rgba(139, 59, 141, 1);
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
     #blog-description {
         font-size: 1.6em;
         margin: -0.2em 0 0 0.1em;
@@ -447,6 +404,7 @@ abbr {
     text-decoration: underline;
 }
 
+.entry-summary p,
 .entry-content p,
 .entry-content li {
     font-size: 16px;
@@ -623,70 +581,6 @@ div.child-pages ul ul {
     background-position: 0px 0px;
 }
 
-/*****************************************************************
- * amr ical events list
- *****************************************************************/
-
-.eventdate abbr,
-.enddate abbr {
-    border: none;
-}
-
-#site-menu > div.site-menu-container div.amrcol1 div {
-    display: inline;
-}
-
-#site-menu > div.site-menu-container div.amrcol1 div.summary {
-    white-space: nowrap;
-}
-
-#site-menu > div.site-menu-container .ical {
-    padding: 0.5em;
-}
-
-#site-menu > div.site-menu-container .ical > br {
-    display: none;
-}
-
-#site-menu > div.site-menu-container .events .widget-title {
-    display: none;
-}
-
-#site-menu > div.site-menu-container .events .noeventsmessage {
-    color: inherit;
-    font-size: 80%;
-    font-weight: normal;
-    padding: 0.7em;
-}
-
-#site-menu > div.site-menu-container .events .noeventsmessage:hover {
-    text-decoration: none;
-}
-
-#site-menu > div.site-menu-container .amrical_credit,
-.entry-content .icalnav {
-    display: none;
-}
-
-.entry-content table.ical {
-    border-collapse: collapse;
-}
-
-.entry-content .ical .group {
-    font-size: 1.25em;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.ical td.amrcol1 {
-    white-space: nowrap;
-}
-
-article.event span.summary {
-    white-space: nowrap;
-    font-weight: bold;
-}
-
 @media print {
     #content, #footer {
         margin: 0 0 0 0;
@@ -694,25 +588,12 @@ article.event span.summary {
 }
 
 /* Desktop */
-
 @media screen and (min-width: 768px) {
     blockquote,
     q {
         font-family: serif;
         font-style: italic;
         font-weight: normal;
-    }
-
-    cite {
-        font-style: normal;
-    }
-
-    @media screen {
-        #header #branding {
-            left: 220px;
-            position: absolute;
-            top: 55px;
-        }
     }
 
     #content, #footer {
@@ -725,16 +606,9 @@ article.event span.summary {
         margin: 0;
     }
 
-    #wrapper {
+    .wrapper {
         width: 800px;
         margin: 0 auto;
-    }
-
-    #header {
-        height: 200px;
-        margin: 0;
-        position: relative;
-        background-repeat: no-repeat;
     }
 
     nav#site-menu {
@@ -742,91 +616,46 @@ article.event span.summary {
         opacity: 1.0;
     }
 
-    #site-menu > div.site-menu-container {
+    #site-menu {
         width: 14em;
         overflow: hidden;
     }
 
+    #site-menu .widget-container,
+    #site-menu .menu,
+    #site-menu .widget-title {
+        margin: 5px 0px;
+    }
+    
     nav#site-menu-button {
         display: none;
     }
 
-    #site-menu > div.site-menu-container .menu > ul > li > a {
+    #site-menu .menu > ul > li > a {
         padding-left: 0;
     }
 
-    #site-menu > div.site-menu-container .menu ul ul > li > a {
+    #site-menu .menu ul ul > li > a {
         padding: 0 0.5em;
-    }
-
-    #site-menu > div.site-menu-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 13em;
     }
 
     #sidebar-after-menu {
         display: none;
     }
 
-    #notwimpy {
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 250px;
-        height: 110px;
-    }
-
-    body #site-menu > div.site-menu-container .menu {
+    body #site-menu .menu {
         font-size: 12pt;
     }
 
-    body #site-menu > div.site-menu-container .menu ul.children,
-    body #site-menu > div.site-menu-container .widget_links {
+    body #site-menu .widget_recent_entries,
+    body #site-menu .menu ul.children,
+    body #site-menu .widget_links {
         font-size: 10pt;
     }
 
-    @media screen {
-        body .alignright {
-            margin: 0 -120px 0 1em;
-        }
-    }
-    body #header {
-        background-image: url("assets/header.gif");
-    }
-
-    body #header #branding {
-        display: none;
-    }
-
     body .alignright {
+        margin: 0 -120px 0 1em;
     }
-
-    body #notwimpy {
-        background-image: url("assets/not_wimpy.png");
-    }
-
-    /* style-amricaleventslist-customizations.css */
-    article.event {
-        margin: 0 0 0.5em 0
-    }
-
-    article.event span.summary {
-        display: inline;
-    }
-
-    article.event span.eventdate {
-        display: inline-block;
-        min-width: 6em;
-    }
-
-    article.event span.starttime,
-    article.event span.endtime {
-        display: inline-block;
-        min-width: 4em;
-    }
-
 }
 
 /* Mobile */
@@ -838,23 +667,12 @@ article.event span.summary {
         padding: 0;
     }
 
-    /* .entry-title {
-        font-size: 1.5em;
-    } */
-
     blockquote {
         margin:  0 1.5em;
         padding: 0;
     }
     
-    #header #branding {
-        font-size: 80%;
-        flex: 1;
-        overflow: hidden;
-        line-height: 50px;
-    }
-
-    #wrapper, #header, #content, #footer {
+    .wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -863,22 +681,6 @@ article.event span.summary {
     #content-inner {
         padding: 1em 2em;
         margin: 0;
-    }
-
-    #footer {
-        /* padding: 1em; */
-    }
-
-    #header {
-        margin: 0;
-        position: fixed;
-        display: flex;
-        top: 0;
-
-        background: #ffffff;
-        border-bottom:  1px solid #dddddd;
-
-        height: 50px;
     }
 
     nav#site-menu {
@@ -908,10 +710,6 @@ article.event span.summary {
         margin-top: 50px;
     }
 
-    #notwimpy {
-        display: none;
-    }
-
     .entry-utility, div.comment-utilities {
         display: none;
     }
@@ -926,10 +724,6 @@ article.event span.summary {
         clear: both;
     }
 
-    body #site-menu > div.site-menu-container div.ical span.eventdate br {
-        display: none;
-    }
-
     body #site-menu > div.site-menu-container ul {
         list-style-type: none;
     }
@@ -941,19 +735,6 @@ article.event span.summary {
     body #site-menu > div.site-menu-container .menu ul.children,
     body #site-menu > div.site-menu-container .widget_links {
         font-size: 0.9em;
-    }
-
-    /* style-amricaleventslist-customizations.css */
-    article.event {
-        margin: 0 0 1em 0
-    }
-
-    article.event span.summary {
-        display: block;
-    }
-
-    article.event span.eventdate:after {
-        content: " ";
     }
 }
 

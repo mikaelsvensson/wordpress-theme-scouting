@@ -10,7 +10,6 @@
 			<div id="site-info">&copy; <?php print date("Y"); ?> <?php bloginfo("name") ?>, <?php bloginfo("description") ?>.</div>
 		</div>
 	</div>
-	<div id="notwimpy"></div>
 </div>
 <?php wp_footer(); ?>
 </body>
