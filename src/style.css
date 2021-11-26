@@ -374,11 +374,6 @@ div.wp-caption.alignleft img {
         display: inline;
     }
 
-    /* Remove the wimpy image? */
-    #notwimpy {
-        display: none;
-    }
-
     #content, #footer {
         margin: 0 0 0 0;
     }
@@ -648,14 +643,6 @@ div.child-pages ul ul {
         display: none;
     }
 
-    #notwimpy {
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 250px;
-        height: 110px;
-    }
-
     body #site-menu .menu {
         font-size: 12pt;
     }
@@ -666,17 +653,8 @@ div.child-pages ul ul {
         font-size: 10pt;
     }
 
-    @media screen {
-        body .alignright {
-            margin: 0 -120px 0 1em;
-        }
-    }
-
     body .alignright {
-    }
-
-    body #notwimpy {
-        background-image: url("assets/not_wimpy.png");
+        margin: 0 -120px 0 1em;
     }
 }
 
@@ -730,10 +708,6 @@ div.child-pages ul ul {
 
     #main {
         margin-top: 50px;
-    }
-
-    #notwimpy {
-        display: none;
     }
 
     .entry-utility, div.comment-utilities {
