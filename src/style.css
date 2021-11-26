@@ -35,19 +35,75 @@ h6,
     letter-spacing: -0.4px;
 }
 
-#blog-title a {
+cite {
+    font-style: normal;
+}
+
+a {
+    color: rgba(139, 59, 141, 1);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nackasmu-logo {
+    font-size: 80%;
+    flex: 1;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+#nackasmu-logo a {
     text-decoration: none;
     color: inherit;
 }
 
+#nackasmu-header-container {
+    margin: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    top: 0;
+
+    background: #ffffff;
+    border-bottom:  1px solid #dddddd;
+
+    height: 50px;
+}
+
+.nackasmu-content-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#nackasmu-logo img {
+    height: 30px;
+    display: block;
+    object-fit: contain;
+    object-position: left;
+    margin: 10px 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .nackasmu-content-wrapper {
+        width: 800px;
+    }
+
+    #nackasmu-logo img {
+        height: 50px;
+        margin: 25px 0px;
+    }
+
+    #nackasmu-header-container {
+        position: relative;
+        height: 100px;
+    }
+}
+
 #footer {
     font-size: 90%;
-}
-
-.aligncenter {
-}
-
-.alignleft {
 }
 
 /*****************************************************************
@@ -58,6 +114,11 @@ h6,
 .entry-utility,
 .post {
     clear: both;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1em 0 0;
 }
 
 .aligncenter {
@@ -75,11 +136,6 @@ h6,
     .alignright {
         margin: 0;
     }
-}
-
-.alignleft {
-    float: left;
-    margin: 0 1em 0 0;
 }
 
 div.wp-caption {
@@ -242,6 +298,43 @@ div.wp-caption.alignleft img {
     margin: 0.5em 0;
 }
 
+@media print {
+    body {
+        font-size: 11pt;
+        background-color: #ffffff;
+    }
+
+    body, a, p, h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .entry-content a {
+        text-decoration: none !important;
+    }
+
+    .nackasmu-content-wrapper {
+        width: 100%;
+    }
+
+    #nackasmu-logo img {
+        height: 30pt;
+        margin: 0pt 0pt 30pt 0pt;
+    }
+
+    #nackasmu-header-container {
+        position: relative;
+        height: 60pt;
+        border-bottom: none;
+    }
+
+    nav#site-menu-button {
+        display: none;
+    }
+
 /*****************************************************************
  * mail form
  *****************************************************************/
@@ -358,20 +451,7 @@ form .wpst_question br {
     display: none;
 }
 
-@media print {
-    body {
-        font-size: 11pt;
-    }
-
-    body, a, p, h1, h2, h3, h4, h5, h6 {
-        color: rgb(46, 42, 37);
-    }
-
-    .entry-content a {
-        text-decoration: none !important;
-    }
-
-    #wrapper, #header, #content, #footer {
+.wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -409,20 +489,17 @@ form .wpst_question br {
         display: inline;
     }
 
+    /* Remove the wimpy image? */
     #notwimpy {
         display: none;
+    }
+
+    #content, #footer {
+        margin: 0 0 0 0;
     }
 }
 
 @media screen {
-    a {
-        color: rgba(139, 59, 141, 1);
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
     #blog-description {
         font-size: 1.6em;
         margin: -0.2em 0 0 0.1em;
@@ -703,18 +780,6 @@ article.event span.summary {
         font-weight: normal;
     }
 
-    cite {
-        font-style: normal;
-    }
-
-    @media screen {
-        #header #branding {
-            left: 220px;
-            position: absolute;
-            top: 55px;
-        }
-    }
-
     #content, #footer {
         margin: 0 0 1em 14em;
     }
@@ -725,16 +790,9 @@ article.event span.summary {
         margin: 0;
     }
 
-    #wrapper {
+    .wrapper {
         width: 800px;
         margin: 0 auto;
-    }
-
-    #header {
-        height: 200px;
-        margin: 0;
-        position: relative;
-        background-repeat: no-repeat;
     }
 
     nav#site-menu {
@@ -757,13 +815,6 @@ article.event span.summary {
 
     #site-menu > div.site-menu-container .menu ul ul > li > a {
         padding: 0 0.5em;
-    }
-
-    #site-menu > div.site-menu-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 13em;
     }
 
     #sidebar-after-menu {
@@ -791,13 +842,6 @@ article.event span.summary {
         body .alignright {
             margin: 0 -120px 0 1em;
         }
-    }
-    body #header {
-        background-image: url("assets/header.gif");
-    }
-
-    body #header #branding {
-        display: none;
     }
 
     body .alignright {
@@ -838,23 +882,12 @@ article.event span.summary {
         padding: 0;
     }
 
-    /* .entry-title {
-        font-size: 1.5em;
-    } */
-
     blockquote {
         margin:  0 1.5em;
         padding: 0;
     }
     
-    #header #branding {
-        font-size: 80%;
-        flex: 1;
-        overflow: hidden;
-        line-height: 50px;
-    }
-
-    #wrapper, #header, #content, #footer {
+    .wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -863,22 +896,6 @@ article.event span.summary {
     #content-inner {
         padding: 1em 2em;
         margin: 0;
-    }
-
-    #footer {
-        /* padding: 1em; */
-    }
-
-    #header {
-        margin: 0;
-        position: fixed;
-        display: flex;
-        top: 0;
-
-        background: #ffffff;
-        border-bottom:  1px solid #dddddd;
-
-        height: 50px;
     }
 
     nav#site-menu {
