@@ -408,6 +408,7 @@ abbr {
     text-decoration: underline;
 }
 
+.entry-summary p,
 .entry-content p,
 .entry-content li {
     font-size: 16px;
