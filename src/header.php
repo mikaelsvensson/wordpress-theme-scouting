@@ -34,6 +34,10 @@
           type="text/css"
           href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style.css')?>"/>
 
+    <link rel="stylesheet"
+          type="text/css"
+          href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style-plugins.css')?>"/>
+
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 
     <?php wp_head(); ?>
