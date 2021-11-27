@@ -12,6 +12,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
 
+/* 
+Colour theme:
+
+Background      hsl(36, 82%, 96%)           https://hslpicker.com/#fdf6ec
+Text            rgb(46, 42, 37)             https://hslpicker.com/#2d2924
+Light text      hsla(36, 23%, 65%, 1)       https://hslpicker.com/#baaa91
+Links           rgba(139, 59, 141, 1)       https://hslpicker.com/#8b3b8c
+*/
+
 body {
     color: rgb(46, 42, 37);
     background-color: hsl(36, 82%, 96%);
@@ -19,7 +28,7 @@ body {
 }
 
 del, strike {
-    color: #aaaaaa;
+    color: hsla(36, 23%, 65%, 1);
 }
 
 h1,
@@ -33,10 +42,6 @@ h6,
     font-weight: 600;
     font-style: normal;
     letter-spacing: -0.4px;
-}
-
-cite {
-    font-style: normal;
 }
 
 a {
@@ -116,20 +121,24 @@ a:hover {
     clear: both;
 }
 
+.wp-block-image .alignleft,
 .alignleft {
     float: left;
-    margin: 0 1em 0 0;
+    margin: 0 1em 1em 0 !important;
+    max-width: 50vw;
 }
 
+.wp-block-image .aligncenter,
 .aligncenter {
-    margin: 0 auto;
+    margin: 0 auto !important;
     display: block;
 }
 
+.wp-block-image .alignright,
 .alignright {
     float: right;
-    padding: 10px;
-    background-position: top right;
+    margin: 0 0 1em 1em !important;
+    max-width: 50vw;
 }
 
 @media print {
@@ -138,14 +147,33 @@ a:hover {
     }
 }
 
+figure img,
+div.wp-caption img,
+.entry-summary p img,
+.entry-content p img,
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+.wp-block-image figcaption,
+cite,
+p.wp-caption-text,
 div.wp-caption {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 75%;
+    font-style: normal;
+    font-size: 13px !important;
+    line-height: 18px !important;
 }
 
+.wp-block-image figcaption,
+.entry-summary p.wp-caption-text,
 .entry-content p.wp-caption-text {
-    margin: 0;
+    margin: 0 !important;
     padding: 0.3em;
     text-align: center;
 }
@@ -155,38 +183,10 @@ div.wp-caption {
     padding: 0.1em;
 }
 
-.aligncenter p.wp-caption-text {
-    text-align: center;
-}
-
-.alignright p.wp-caption-text {
-    text-align: right;
-}
-
+.aligncenter p.wp-caption-text,
+.alignright p.wp-caption-text,
 .alignleft p.wp-caption-text {
-    text-align: left;
-}
-
-div.wp-caption img {
-    display: block;
-    height: auto;
-}
-
-div.wp-caption,
-div.wp-caption img {
-    max-width: 500px;
-}
-
-div.wp-caption.aligncenter img {
-    padding: 0 5px;
-}
-
-div.wp-caption.alignright img {
-    padding: 0 0 0 10px;
-}
-
-div.wp-caption.alignleft img {
-    padding: 0 10px 0 0;
+    text-align: center;
 }
 
 /*****************************************************************
@@ -493,8 +493,17 @@ img {
 }
 
 blockquote {
-    margin: 0 2em;
+    font-family: serif;
+    font-style: italic;
+    font-weight: normal;
+    
+    margin: 2em;
     padding: 0;
+}
+
+blockquote cite {
+    display: block;
+    margin: 2em 0 0 0;
 }
 
 code,
@@ -534,7 +543,7 @@ form {
 div.entry-meta, div.entry-utility, div.comment-meta, div.comment-utilities, div.breadcrumbs, div#site-info {
     font-family: 'Poppins', sans-serif;
     font-size: 80%;
-    color: #aaaaaa;
+    color: hsla(36, 23%, 65%, 1);
     margin: 0 0 0.5em;
 }
 
@@ -589,13 +598,6 @@ div.child-pages ul ul {
 
 /* Desktop */
 @media screen and (min-width: 768px) {
-    blockquote,
-    q {
-        font-family: serif;
-        font-style: italic;
-        font-weight: normal;
-    }
-
     #content, #footer {
         margin: 0 0 1em 14em;
     }
@@ -652,26 +654,10 @@ div.child-pages ul ul {
     body #site-menu .widget_links {
         font-size: 10pt;
     }
-
-    body .alignright {
-        margin: 0 -120px 0 1em;
-    }
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    blockquote,
-    q {
-        font-style: italic;
-        margin: 0 2em;
-        padding: 0;
-    }
-
-    blockquote {
-        margin:  0 1.5em;
-        padding: 0;
-    }
-    
     .wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
