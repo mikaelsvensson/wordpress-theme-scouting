@@ -91,9 +91,9 @@ a:hover {
     margin: 10px 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 450px) {
     .nackasmu-content-wrapper {
-        width: 800px;
+        width: 750px;
     }
 
     #nackasmu-logo img {
@@ -647,7 +647,7 @@ div.child-pages ul ul {
 }
 
 /* Desktop */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 450px) {
     #content, #footer {
         margin: 0 0 1em 14em;
     }
@@ -659,7 +659,7 @@ div.child-pages ul ul {
     }
 
     .wrapper {
-        width: 800px;
+        width: 750px;
         margin: 0 auto;
     }
 
@@ -707,7 +707,7 @@ div.child-pages ul ul {
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px), screen and (max-height: 449px) {
     .wrapper, #nackasmu-header-container, #header, #content, #footer {
         width: 100%;
         margin: 0;
@@ -716,7 +716,8 @@ div.child-pages ul ul {
 
     #content-inner {
         padding: 1em 2em;
-        margin: 0;
+        margin: 0 auto;
+        max-width: 550px;
     }
 
     nav#site-menu {
