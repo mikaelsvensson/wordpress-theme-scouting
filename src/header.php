@@ -32,11 +32,11 @@
 
     <link rel="stylesheet"
           type="text/css"
-          href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style.css')?>"/>
+          href="<?= get_stylesheet_directory_uri() ?>/style.css?<?=filemtime(dirname( __FILE__ ) . '/style.css')?>"/>
 
     <link rel="stylesheet"
           type="text/css"
-          href="<?php bloginfo('stylesheet_url'); ?>?<?=filemtime(dirname( __FILE__ ) . '/style-plugins.css')?>"/>
+          href="<?= get_stylesheet_directory_uri() ?>/style-plugins.css?<?=filemtime(dirname( __FILE__ ) . '/style-plugins.css')?>"/>
 
     <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 

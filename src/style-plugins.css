@@ -43,8 +43,22 @@ div.entry-content div form dl dd br {
 
 }
 
+span.wpcf7-form-control-wrap {
+    position: inherit !important;
+}
+
 div.wpcf7 input, .wpcf7 textarea {
     width: 100%;
+    font-family: Swift, Georgia, Times, serif;
+    padding: 0.5em;
+}
+
+div.wpcf7 input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: rgba(139, 59, 141, 1);
+    padding: 0.8em 1em 0.7em 1em;
+    border: none;
 }
 
 div.wpcf7 input.wpcf7-submit {
@@ -53,25 +67,21 @@ div.wpcf7 input.wpcf7-submit {
 
 div.wpcf7-response-output {
     font-weight: normal;
-    margin: inherit;
-    padding: inherit;
-    margin-bottom: 1em;
+
+    margin: 1em 0em 3em 0em !important;
+	padding: 0 !important;
+	border: none !important;
 }
 
-div.wpcf7-mail-sent-ok {
-    border:      none;
-    color:       #489217; /* Change colour? */
-    font-size:   125%;
-    font-weight: bold;
-}
-
+span.wpcf7-not-valid-tip,
 span.wpcf7-not-valid-tip-no-ajax {
-    font-size: 80%;
+    font-size: 80% !important;
 }
 
+span.wpcf7-not-valid-tip,
 span.wpcf7-not-valid-tip-no-ajax,
 div.wpcf7-validation-errors {
-    color: #d63c1e;  /* Change colour? */
+    color: rgba(160, 39, 39, 1) !important
 }
 
 div.wpcf7-validation-errors {
@@ -196,6 +206,11 @@ form .wpst_question br {
     article.event span.starttime,
     article.event span.endtime {
         display: inline-block;
+    }
+    article.event span.starttime {
+        min-width: 3em;
+    }
+    article.event span.endtime {
         min-width: 4em;
     }
 }
